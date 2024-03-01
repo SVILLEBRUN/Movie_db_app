@@ -18,7 +18,7 @@
             </div>
             <div class="q-ma-sm" >
               <div class="row items-center q-mb-xs">
-                <div class="movie-title text-bold" st>{{ movie.title }}</div>
+                <div class="movie-title text-bold">{{ movie.title }}</div>
                 <!-- Dans la db récupérer de meilleures dates -->
                 <div class="text-caption text-bold text-italic text-grey-5 q-ml-md">{{ movie.folder_name.slice(-6) }}</div>
               </div>
