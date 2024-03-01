@@ -1,0 +1,250 @@
+GET http://localhost:3000/movies
+
+###
+
+GET http://localhost:3000/movies/1345
+
+###
+
+POST http://localhost:3000/movies
+
+{
+    "title": "1917",
+    "original_language": "en",
+    "genres": [
+      "Guerre",
+      "Drame",
+      "Histoire"
+    ],
+    "overview": "Pris dans la tourmente de la Première Guerre Mondiale, Schofield et Blake, deux jeunes soldats britanniques, se voient assigner une mission à proprement parler impossible. Porteurs d’un message qui pourrait empêcher une attaque dévastatrice et la mort de centaines de soldats, dont le frère de Blake, ils se lancent dans une véritable course contre la montre, derrière les lignes ennemies.",
+    "poster_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zppHKKEkHg9ZGzOdzZwW8lZYYqy.jpg",
+    "actors": [
+      {
+        "name": "George MacKay",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/agJ3u6vNmXyMhQo7qB3I1kXOEIY.jpg"
+      },
+      {
+        "name": "Dean-Charles Chapman",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/sDWP1EZKmzb46Arm8igxpI9siYx.jpg"
+      },
+      {
+        "name": "Mark Strong",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3cNmatYsoifytg7TfQhI1EHow3v.jpg"
+      },
+      {
+        "name": "Andrew Scott",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/akbGBP3RI4siNLPr8Pa6YcD2NJt.jpg"
+      },
+      {
+        "name": "Richard Madden",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kC7X9LgAtJfpxUBRtVwaVTEXomH.jpg"
+      },
+      {
+        "name": "Claire Duburcq",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qS6WwLJb8GlYcIV5Cj16J3RJDE3.jpg"
+      },
+      {
+        "name": "Colin Firth",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/z6wxnkqSTnzO1tcBui0ss7ehdm9.jpg"
+      },
+      {
+        "name": "Benedict Cumberbatch",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fBEucxECxGLKVHBznO0qHtCGiMO.jpg"
+      },
+      {
+        "name": "Daniel Mays",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/2qmA5mXnhA7Nelu2BTbJTvzq35u.jpg"
+      },
+      {
+        "name": "Adrian Scarborough",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/61lXhIEZzSsT38yBro8Rh01GDmA.jpg"
+      },
+      {
+        "name": "Chris Walley",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qASA1oFOwEvL7epg0HZkPE4SRwc.jpg"
+      },
+      {
+        "name": "Nabhaan Rizwan",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/ljDpNmRnx9Mxe6DZbOMVZlGVXAN.jpg"
+      },
+      {
+        "name": "Jamie Parker",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/Att2QAYBXyttQKCa6ZIoluWAvHt.jpg"
+      },
+      {
+        "name": "Tommy French",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/fDEVG8sRsVuwWdF13Qm8FJT276v.jpg"
+      },
+      {
+        "name": "Paul Tinto",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/xkuHCToqahrpzcFbqBlxIxbE6cV.jpg"
+      },
+      {
+        "name": "Billy Postlethwaite",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/cpHNAqOBP8SIcml1A8ODmtuEyNh.jpg"
+      },
+      {
+        "name": "Richard McCabe",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/j7ra3qbWSYKwONNfJ6GBMuIoixY.jpg"
+      },
+      {
+        "name": "Justin Edwards",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/wvQImCMgCEApYHzFTmsYYwnCp4B.jpg"
+      },
+      {
+        "name": "Jonny Lavelle",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/sJbxDXtXzUb2EDCEv2YsKa428xg.jpg"
+      },
+      {
+        "name": "Gabriel Akuwudike",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8ZsobpbFutJZt3X8yAJJk2HGiHm.jpg"
+      },
+      {
+        "name": "Pip Carter",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/1ToRZDhzyIkTvexq5zmiQIQRLhP.jpg"
+      },
+      {
+        "name": "Michael Jibson",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/eGdaqVXfjRPBFqddHiSKS7SorM2.jpg"
+      },
+      {
+        "name": "Andy Apollo",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/q5pziqEDK8MN65NLBuRsBvndUXv.jpg"
+      },
+      {
+        "name": "Josef Davies",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/geljWJJDVuthFmwqiFundYwqwPR.jpg"
+      },
+      {
+        "name": "Spike Leighton",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/y6YSlsVnsUDjsKfDUpP53pgSvdC.jpg"
+      },
+      {
+        "name": "Robert Maaser",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/A1YhyTwttU94AsaA2zktcEeDMmz.jpg"
+      },
+      {
+        "name": "Gerran Howell",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/uckDufKbHfRhz94BaMdkurRp6ra.jpg"
+      },
+      {
+        "name": "Adam Hugill",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/o0XToJB2MrTtNm5n2g3UYxcMNrV.jpg"
+      },
+      {
+        "name": "Benjamin Adams",
+        "profile_path": null
+      },
+      {
+        "name": "Anson Boon",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nxrcq1SiFpvrMckcDq5SV3fwYvj.jpg"
+      },
+      {
+        "name": "Kenny Fullwood",
+        "profile_path": null
+      },
+      {
+        "name": "Ryan Nolan",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/kbRJCpyE1mgU4lFtCtoZErAZJCp.jpg"
+      },
+      {
+        "name": "Elliot Baxter",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gKkEF8ZgN8TFbltGmpU4Ry0WkSb.jpg"
+      },
+      {
+        "name": "Bogdan Kumshatsky",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/bJSkpkpRSbb7DgIVovxKu2cagN6.jpg"
+      },
+      {
+        "name": "Kye Mckee",
+        "profile_path": null
+      },
+      {
+        "name": "Ivy-I Macnamara",
+        "profile_path": null
+      },
+      {
+        "name": "Merlin Leonhardt",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/q0RbAJ0EOUVKGYRVrhFDXkNbc0B.jpg"
+      },
+      {
+        "name": "Taddeo Kufus",
+        "profile_path": null
+      },
+      {
+        "name": "Jos Slovick",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/mkJgrZeItMVVNzclJ4OLJbbDaRl.jpg"
+      },
+      {
+        "name": "Luke Hornsby",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/v1JkBn17BXc79xpGxA7pwGBI7t0.jpg"
+      },
+      {
+        "name": "Jack Shalloo",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/nnllU5Uiif7a2Txmy3cNVJztXNG.jpg"
+      },
+      {
+        "name": "Elliot Edusah",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/cqtqwlmmg13D342GmZLpgab2BcY.jpg"
+      },
+      {
+        "name": "Joe Mendes",
+        "profile_path": null
+      },
+      {
+        "name": "Jacob James Beswick",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zdXqPO42sFulUn10suNuzAG69fZ.jpg"
+      },
+      {
+        "name": "Ian Wilson",
+        "profile_path": null
+      },
+      {
+        "name": "Bradley Connor",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/enT9EegNtt9vWnei4CmAuk3gqBH.jpg"
+      },
+      {
+        "name": "John Hollingworth",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7aT6wgl1xYfBHtW2q3oADUuAwMM.jpg"
+      },
+      {
+        "name": "Daniel Attwell",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gfMYoB3OGXQRrtDLBgDP1FtYcdL.jpg"
+      },
+      {
+        "name": "Samson Cox-Vinell",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/6p5k7eW3dnTO0EcaPs9L3XtcrP.jpg"
+      },
+      {
+        "name": "Richard Dempsey",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gaUPWEBm4qMlqXstzRgu9s3OGMT.jpg"
+      },
+      {
+        "name": "Phil Cheadle",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/4JDkMQsBQ2tEhKjk8bw3dD5u1Wu.jpg"
+      },
+      {
+        "name": "Jonah Russell",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/8lhY8m9bD3mkqgXI5iMS5nNSxv3.jpg"
+      },
+      {
+        "name": "Michael Rouse",
+        "profile_path": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/zGs7QH27q1OEIN0hcpvSK2IM2R4.jpg"
+      },
+      {
+        "name": "Kieran Geary",
+        "profile_path": null
+      }
+    ],
+    "keywords": [
+      "world war i",
+      "british army",
+      "race against time",
+      "soldier",
+      "trenches",
+      "1910s",
+      "trench warfare",
+      "no man's land"
+    ],
+    "folder_name": "1917 (2019)"
+  }
