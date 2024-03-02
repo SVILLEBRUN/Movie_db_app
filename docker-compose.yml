@@ -1,0 +1,10 @@
+version: "3.5"
+services:
+    movie-db-vue:
+        container_name: movie-db-vue
+        build:
+            context: ./movie-db-vue
+            dockerfile: Dockerfile
+        ports:
+            - "8080:80"
+        restart: always

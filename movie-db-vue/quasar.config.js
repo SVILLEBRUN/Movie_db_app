@@ -80,11 +80,11 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-devServer
     devServer: {
-      server: {
-        type: 'http'
-      },
+      // server: {
+      //   type: 'http'
+      // },
       port: 8080,
-      open: true // opens browser window automatically
+      open: false // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-framework
@@ -116,7 +116,7 @@ module.exports = configure(function (ctx) {
       // manualStoreHydration: true,
       // manualPostHydrationTrigger: true,
 
-      prodPort: 3000, // The default port that the production server should use
+      prodPort: 8080, // The default port that the production server should use
       // (gets superseded if process.env.PORT is specified at runtime)
 
       maxAge: 1000 * 60 * 60 * 24 * 30,
