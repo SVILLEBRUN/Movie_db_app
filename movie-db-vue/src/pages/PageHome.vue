@@ -1,9 +1,7 @@
 <template>
   <q-page class="text-grey-1 constrain">
     <div class="row no-wrap" style="min-height:100vh">
-      <div class="search bg-grey-9 q-pa-sm q-mr-sm">
-        Volet de recherche
-      </div>
+      <div class="search bg-grey-9 q-pa-sm q-mr-sm">Volet de recherche</div>
       <div class="bg-grey-9 q-pa-sm" style="width:100%">
         <div class="text-h6 q-mb-sm">Résultats :</div>
         <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-sm" flat bordered>
