@@ -4,18 +4,17 @@ services:
         container_name: movie-db-vue
         build:
             context: ./movie-db-vue
-            target: 'development-stage'
+            dockerfile: Dockerfile
         ports:
-            - "8080:8080"
+            - "8080:80"
         restart: always
         volumes:
             - ./movie-db-vue:/app
-        command: /bin/sh -c "yarn && quasar dev"
     movie-db-core-api:
         container_name: movie-db-core-api
         build:
             context: ./movie-db-core-api
-            target: 'development-stage'
+            target: 'production-stage'
         ports:
             - "3000:3000"
         restart: always
