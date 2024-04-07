@@ -83,8 +83,17 @@ module.exports = configure(function (ctx) {
       server: {
         type: 'http'
       },
+      host: '0.0.0.0',
       port: 8080,
       open: true // opens browser window automatically
+    },
+    prodServer: {
+      server: {
+        type: 'http'
+      },
+      host: '0.0.0.0',
+      port: 8080,
+      open: false
     },
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-framework
