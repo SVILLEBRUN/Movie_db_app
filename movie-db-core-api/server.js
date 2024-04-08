@@ -14,4 +14,4 @@ app.use(express.json())
 const moviesRouter = require('./routes/movies')
 app.use('/movies', moviesRouter)
 
-app.listen(3000, () => console.log('Server Started'))
+app.listen(3000, '0.0.0.0', () => console.log('Server Started'))
