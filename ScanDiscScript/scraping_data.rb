@@ -18,13 +18,28 @@ titles_origin = data['names']
 
 titles_origin.each do |title_origin|
 	title = title_origin.split('(')[0].strip
-	title = title.gsub(' ', '-')
 	date = title_origin[-6..]
 	date&.delete!('()')
 	movie_titles << [title.downcase, date, title_origin]
 end
 
 $errors = []
+
+def data_request(title, year)
+	base_url = "https://api.themoviedb.org/3/search/movie"
+	params = {
+		api_key: API_KEY,
+		query: title,
+		year: year,
+		language: "fr-FR"
+	}
+	uri = URI(base_url)
+	uri.query = URI.encode_www_form(params)
+
+	response = Net::HTTP.get(uri)
+	api_query = JSON.parse(response)
+end
+
 
 def get_movie_id(movie_title)
 	title = movie_title[0]
@@ -41,18 +56,14 @@ def get_movie_id(movie_title)
 
 	# url = "https://api.themoviedb.org/3/search/movie?api_key=#{API_KEY}&query=#{title}&year=#{year}&language=fr-FR"
 	# url = "https://api.themoviedb.org/3/search/movie?api_key=fde5eec290651347ef46855a96301aaa&query=#{title}&year=#{year}&language=fr-FR"
-	base_url = "https://api.themoviedb.org/3/search/movie"
-	params = {
-		api_key: API_KEY,
-		query: title,
-		year: year,
-		language: "fr-FR"
-	}
-	uri = URI(base_url)
-	uri.query = URI.encode_www_form(params)
+	
+	api_query = data_request(title, year)
 
-	response = Net::HTTP.get(uri)
-	api_query = JSON.parse(response)
+	if !api_query['results'] || api_query['results'].length == 0
+		title = title = title.split('-')[1]
+		api_query = data_request(title, year)
+	end
+	
 
 	if api_query['results'] != [] && api_query['results'].length == 1  	# Si il n'y a qu'un seul résultat, on le prends, si non c'est une erreur
 		return api_query['results'][0]['id']
@@ -159,55 +170,43 @@ errors = JSON.parse(errors_fils)
 
 end_errors = Marshal.load(Marshal.dump(errors))
 
-# errors.each do |error| 
-# 	# if !error["results"] || error["results"].length == 0
-# 	# 	title = title_origin.split('(')[0].strip
-# 	# 	date = title_origin[-6..]
-# 	# 	date&.delete!('()')
-		
-
-		
-# 	# end
-# end
 
 
+errors.each do |error|
+	if error["results"] && error["results"].length > 1
+		puts ' '
+		puts '-------------------------------'
+		puts error["title"]
+		error["results"].each_with_index do |result, i|
+			puts "#{i+1} - #{result["original_title"]} - #{result["release_date"]}"
+		end
+		puts ' '
+		puts "X - None of the above"
+		puts ' '
+		puts '-------------------------------'
+		puts ' '
+		choice = gets.chomp.downcase
+		if choice != 'x' && choice.to_i > 0 && choice.to_i < error["results"].length + 1
+			id = error["results"][choice.to_i - 1]["id"]
+			data = get_data(id)
+			data["folder_name"] = error["title"]
+			existing_data << data
+			end_errors.delete(error)
+		elsif choice == 'x'
+			# On passe au suivant
+			next
+		else
+			# On stope la boucle 
+			break
+		end
+	end
+end
 
+File.open('movies_data.json', 'w') do |file|
+	file.write(JSON.pretty_generate(existing_data))
+end
 
-# errors.each do |error|
-# 	if error["results"] && error["results"].length > 1
-# 		puts ' '
-# 		puts '-------------------------------'
-# 		puts error["title"]
-# 		error["results"].each_with_index do |result, i|
-# 			puts "#{i+1} - #{result["original_title"]} - #{result["release_date"]}"
-# 		end
-# 		puts ' '
-# 		puts "X - None of the above"
-# 		puts ' '
-# 		puts '-------------------------------'
-# 		puts ' '
-# 		choice = gets.chomp.downcase
-# 		if choice != 'x' && choice.to_i > 0 && choice.to_i < error["results"].length + 1
-# 			id = error["results"][choice.to_i - 1]["id"]
-# 			data = get_data(id)
-# 			data["folder_name"] = error["title"]
-# 			existing_data << data
-# 			end_errors.delete(error)
-# 		elsif choice == 'x'
-# 			# On passe au suivant
-# 			next
-# 		else
-# 			# On stope la boucle 
-# 			break
-# 		end
-# 	end
-# end
-
-# File.open('movies_data.json', 'w') do |file|
-# 	file.write(JSON.pretty_generate(existing_data))
-# end
-
-# File.open('errors.json', 'w') do |file|
-# 	file.write(JSON.pretty_generate(end_errors))
-# end
+File.open('errors.json', 'w') do |file|
+	file.write(JSON.pretty_generate(end_errors))
+end
 
