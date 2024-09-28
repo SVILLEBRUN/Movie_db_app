@@ -154,15 +154,18 @@ puts 'Done scraping data!'
 
 
 puts 'Fixing Errors ...'
+file = File.read('errors.json')
+errors = JSON.parse(file)
+
 end_errors = Marshal.load(Marshal.dump($errors))
 
-$errors.each do |error|
+errors.each do |error|
 	if error[:results] && error[:results].length > 1
 		puts ' '
 		puts '-------------------------------'
 		puts error[:title]
 		error[:results].each_with_index do |result, i|
-			puts "#{i+1} - #{result["original_title"]}"
+			puts "#{i+1} - #{result["original_title"]} - #{result["release_date"]}"
 		end
 		puts ' '
 		puts "X - None of the above"
