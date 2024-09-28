@@ -7,6 +7,8 @@ require 'csv'
 require 'json'
 require 'ruby-progressbar'
 
+API_KEY = "fde5eec290651347ef46855a96301aaa"
+
 movie_titles = []
 titles_origin = []
 
@@ -31,8 +33,17 @@ def get_movie_id(movie_title)
 	return false unless year
 	return false unless year.match?(/^\d{4}$/)
 
-	url = "https://api.themoviedb.org/3/search/movie?api_key=fde5eec290651347ef46855a96301aaa&query=#{title}&year=#{year}&language=fr"
-	uri = URI(url)
+	# url = "https://api.themoviedb.org/3/search/movie?api_key=#{API_KEY}&query=#{title}&year=#{year}&language=fr"
+	base_url = "https://api.themoviedb.org/3/search/movie"
+	params = {
+		api_key: API_KEY,
+		query: movie_name,
+		year: year,
+		language: "fr"
+	}
+	uri = URI(base_url)
+	uri.query = URI.encode_www_form(params)
+
 	response = Net::HTTP.get(uri)
 	api_query = JSON.parse(response)
 
@@ -45,7 +56,7 @@ end
 
 def get_data(movie_id)
 	data = {}
-	url_details = "https://api.themoviedb.org/3/movie/#{movie_id}?api_key=fde5eec290651347ef46855a96301aaa&language=fr"
+	url_details = "https://api.themoviedb.org/3/movie/#{movie_id}?api_key=#{API_KEY}&language=fr"
 	uri_details = URI(url_details)
 	response_details = Net::HTTP.get(uri_details)
 	api_data_details = JSON.parse(response_details)
@@ -60,7 +71,7 @@ def get_data(movie_id)
 	# data[:overview] = api_data_details['overview']
 	data[:poster_url] = base_poster_url + api_data_details['poster_path']
 
-	url_credits = "https://api.themoviedb.org/3/movie/#{movie_id}/credits?api_key=fde5eec290651347ef46855a96301aaa&language=fr-FR"
+	url_credits = "https://api.themoviedb.org/3/movie/#{movie_id}/credits?api_key=#{API_KEY}&language=fr-FR"
 	uri_credits = URI(url_credits)
 	response_credits = Net::HTTP.get(uri_credits)
 	api_data_credits = JSON.parse(response_credits)
@@ -70,7 +81,7 @@ def get_data(movie_id)
 		{ name: cast_member['name'], profile_path: img_link }
 	end
 
-	url_keywords = "https://api.themoviedb.org/3/movie/#{movie_id}/keywords?api_key=fde5eec290651347ef46855a96301aaa&language=fr-FR"
+	url_keywords = "https://api.themoviedb.org/3/movie/#{movie_id}/keywords?api_key=#{API_KEY}&language=fr-FR"
 	uri_keywords = URI(url_keywords)
 	response_keywords = Net::HTTP.get(uri_keywords)
 	api_data_keywords = JSON.parse(response_keywords)
