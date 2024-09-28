@@ -1,9 +1,5 @@
 [
   {
-    "title": "Astérix & Obélix - L'Empire du Milieu (2023)",
-    "error": "Movie not found"
-  },
-  {
     "title": "Becky (2020)",
     "error": "Multiple movies found",
     "results": [
@@ -92,138 +88,6 @@
     "error": "Movie not found"
   },
   {
-    "title": "James Bond 07 - Diamonds Are Forever (1971)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "James Bond 09 - The Man with the Golden Gun (1974)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 10 - Captain America The Winter Soldier (2014)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 11 - Guardians of the Galaxy (2014)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 12 - Avengers Age of Ultron (2015)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 13 - Ant-Man (2015)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 14 - Captain America Civil War (2016)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 15 - Doctor Strange (2016)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 16 - Guardians Of The Galaxy Vol. 2 (2017)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 17 - Spider-Man Homecoming (2017)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 18 - Thor Ragnarok (2017)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 19 - Black Panther (2018)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 2 - Captain Marvel (2019)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 21 - Avengers Infinity War (2018)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 22 - Ant-Man And The Wasp (2018)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 23 - Avengers Endgame (2019)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 24 - Spider-Man Far From Home (2019)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 25 - Black Widow (2021)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 26 - Shang-Chi And The Legend Of The Ten Rings (2021)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 27 - Eternals (2021)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 28 - Spider-Man No Way Home (2021)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 29 - Doctor Strange In The Multiverse Of Madness (2022)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 3 - Iron Man (2008)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 30 - Thor Love And Thunder (2022)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 31 - Black Panther Wakanda Forever (2022)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 32 - Ant-Man And The Wasp Quantumania (2023)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 33 - Guardians Of The Galaxy Vol. 3 (2023)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 4 - Iron Man 2 (2010)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 5 - Thor (2011)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 6 - The Incredible Hulk (2008)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 7 - The Avengers (2012)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 8 - Thor The Dark World (2013)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "MARVEL 9 - Iron Man 3 (2013)",
-    "error": "Movie not found"
-  },
-  {
     "title": "Mais Qui A Re-Tué Pamela Rose (2012)",
     "error": "Movie not found"
   },
@@ -254,31 +118,7 @@
     ]
   },
   {
-    "title": "Star Wars 10 - Star Wars The Last Jedi (2017)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "Star Wars 11 - Star Wars The Rise Of Skywalker (2019)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "Star Wars 4 - Solo A Star Wars Story (2018)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "Star Wars 6 - Star Wars Episode IV A New Hope (1977)",
-    "error": "Movie not found"
-  },
-  {
     "title": "Star Wars 7 - Star Wars Episode V The Empire Strikes Back (1080)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "Star Wars 8 - Star Wars Episode VI Return of the Jedi (1983)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "Star Wars 9 - Star Wars Episode VII - The Force Awakens (2015)",
     "error": "Movie not found"
   },
   {
@@ -546,12 +386,42 @@
     "error": "Movie not found"
   },
   {
-    "title": "X-MEN 12 - Logan (2017)",
-    "error": "Movie not found"
-  },
-  {
     "title": "X-MEN 2 - X-Men Origins Wolverine (2009)",
-    "error": "Movie not found"
+    "error": "Multiple movies found",
+    "results": [
+      {
+        "id": 36658,
+        "original_language": "en",
+        "original_title": "X2",
+        "overview": "Toujours considérés comme des monstres par une société qui les rejette, les mutants sont une nouvelle fois au centre des débats alors qu'un crime effroyable commis par l'un d'eux relance la polémique autour de l'Acte d'Enregistrement des Mutants et le mouvement anti-mutants, dirigé par l'ancien militaire William Stryker. Quand ce dernier lance une attaque contre l'école de mutants du Professeur Charles Xavier, les X-Men se préparent à une guerre sans merci pour leur survie, aidés de Magnéto, récemment évadé de sa cellule de plastique. Parallèlement, Wolverine enquête sur son mystérieux passé, auquel Stryker, dont on dit qu'il a mené de nombreuses expériences sur les mutants, ne serait pas étranger…",
+        "release_date": "2003-04-27",
+        "title": "X-Men 2"
+      },
+      {
+        "id": 1685,
+        "original_language": "en",
+        "original_title": "Beneath the Planet of the Apes",
+        "overview": "L'astronaute Brent est envoyé au secours de Taylor, mais s'écrase à son tour sur la \"planète des singes\". Cherchant à retrouver son compagnon avec l'aide de Nova, il suit sa trace jusque dans la \"zone interdite\" où il découvre une société de mutants humains télépathes.",
+        "release_date": "1970-04-23",
+        "title": "Le Secret de la planète des singes"
+      },
+      {
+        "id": 7343,
+        "original_language": "pt",
+        "original_title": "Cidade dos Homens",
+        "overview": "Laranjinha et Acerola vont bientôt avoir 18 ans. Ils ont grandi ensemble dans les favelas de Rio de Janeiro. Acerola est marié et a un fils de deux ans dont il doit s'occuper. Habitué à sa liberté, il se sent prisonnier et vit sa paternité comme un fardeau. Pour Laranjinha, le problème n'est pas d'être père, mais de ne jamais en avoir eu. Bien décidé à retrouver son géniteur, il commence à fouiller dans son passé. Alors que les deux amis se débattent avec les premières épreuves de l'âge adulte, ils sont entraînés malgré eux dans les guerres intestines que se livrent les trafiquants de drogue et les bandes locales...",
+        "release_date": "2007-08-31",
+        "title": "La Cité des hommes"
+      },
+      {
+        "id": 6977,
+        "original_language": "en",
+        "original_title": "No Country for Old Men",
+        "overview": "À la frontière qui sépare le Texas du Mexique, les trafiquants de drogue ont depuis longtemps remplacé les voleurs de bétail. Lorsque Llewelyn Moss tombe sur une camionnette abandonnée, cernée de cadavres ensanglantés, il ne sait rien de ce qui a conduit à ce drame. Et quand il prend les deux millions de dollars qu’il découvre à l’intérieur du véhicule, il n’a pas la moindre idée de ce que cela va provoquer… Moss a déclenché une réaction en chaîne d’une violence inouïe que le shérif Bell, un homme vieillissant et sans illusions, ne parviendra pas à contenir…",
+        "release_date": "2007-06-13",
+        "title": "No Country for Old Men"
+      }
+    ]
   },
   {
     "title": "X-MEN 3 - X-Men (2000)",
@@ -563,10 +433,6 @@
   },
   {
     "title": "X-MEN 5 - X-Men The Last Stand (2006)",
-    "error": "Movie not found"
-  },
-  {
-    "title": "X-MEN 9 - Dark Phoenix (2019)",
     "error": "Movie not found"
   }
 ]
