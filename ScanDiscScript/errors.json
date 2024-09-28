@@ -59,7 +59,33 @@
   },
   {
     "title": "Incognito (2012)",
-    "error": "Movie not found"
+    "error": "Multiple movies found",
+    "results": [
+      {
+        "id": 738242,
+        "original_language": "pt",
+        "original_title": "Incógnito",
+        "overview": "Lúcia is a lawyer that works to help women whose the father of the relationship deny the paternity. A job she is very keen about since she doesn't know who her father is.",
+        "release_date": "2012-02-26",
+        "title": "Incógnito"
+      },
+      {
+        "id": 1165116,
+        "original_language": "az",
+        "original_title": "İnkoqnito",
+        "overview": "",
+        "release_date": "2012-03-02",
+        "title": "Incognito"
+      },
+      {
+        "id": 153133,
+        "original_language": "en",
+        "original_title": "Undercover Bridesmaid",
+        "overview": "Tanya, agent de sécurité, est engagée par un homme d'affaires pour protéger sa fille lors de son mariage. Tanya déteste les mariages depuis que son fiancé l'a quitté mais pourtant, durant la cérémonie, elle tombe sous le charme de Jake, un ami des mariés. Méfiante, elle refuse de se laisser séduire...",
+        "release_date": "2012-04-15",
+        "title": "Le Bodyguard de l'amour"
+      }
+    ]
   },
   {
     "title": "Inséparables (2019)",
