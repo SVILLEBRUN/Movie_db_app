@@ -40,6 +40,6 @@ File.write('movie_titles.json', valid_json_str)
 # Créer un fichier JSON avec les noms de films non valides
 non_valid_result = { names: non_valid_titles.sort! }
 non_valid_json_str = JSON.pretty_generate(non_valid_result)
-File.write('titles_errors', non_valid_json_str)
+File.write('titles_errors.json', non_valid_json_str)
 
 puts 'Script finished'
