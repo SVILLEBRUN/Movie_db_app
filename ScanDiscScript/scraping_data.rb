@@ -119,52 +119,52 @@ existing_folder_names = existing_data.map { |hash| hash['folder_name'] }        
 progressbar = ProgressBar.create(total: movie_titles.count, format: '%t |%B| %p%%')
 
 num_new_movies = 0
-puts 'Starting to scrape data...'
-movie_titles.each_with_index do |movie_title, i|
-	title = titles_origin[i]
-	storage_title = movie_title[2]
-	unless existing_folder_names.include?(title)                                            # Comment to rescrape all movies
-		movie_id = get_movie_id(movie_title)
-		if movie_id
-			data = get_data(movie_id)
-			data[:folder_name] = title
-			existing_data << data
-			num_new_movies += 1
-		end
-	end                                                                                     # Comment to rescrape all movies
-	progressbar.increment
-end
-puts "\n\n#{num_new_movies} new movies scraped !\n\n"
-puts "\n\n#{existing_data.count} movies total in database !\n\n"
-puts "\n#{$errors.count} movies not scraped:\n\n#{'-' * 55}\n\n"
+# puts 'Starting to scrape data...'
+# movie_titles.each_with_index do |movie_title, i|
+# 	title = titles_origin[i]
+# 	storage_title = movie_title[2]
+# 	unless existing_folder_names.include?(title)                                            # Comment to rescrape all movies
+# 		movie_id = get_movie_id(movie_title)
+# 		if movie_id
+# 			data = get_data(movie_id)
+# 			data[:folder_name] = title
+# 			existing_data << data
+# 			num_new_movies += 1
+# 		end
+# 	end                                                                                     # Comment to rescrape all movies
+# 	progressbar.increment
+# end
+# puts "\n\n#{num_new_movies} new movies scraped !\n\n"
+# puts "\n\n#{existing_data.count} movies total in database !\n\n"
+# puts "\n#{$errors.count} movies not scraped:\n\n#{'-' * 55}\n\n"
 
-$errors.each do |error|
-  	puts error[:title]
-end
+# $errors.each do |error|
+#   	puts error[:title]
+# end
 
-File.open('movies_data.json', 'w') do |file|
-  	file.write(JSON.pretty_generate(existing_data))
-end
+# File.open('movies_data.json', 'w') do |file|
+#   	file.write(JSON.pretty_generate(existing_data))
+# end
 
-File.open('errors.json', 'w') do |file|
-  	file.write(JSON.pretty_generate($errors))
-end
+# File.open('errors.json', 'w') do |file|
+#   	file.write(JSON.pretty_generate($errors))
+# end
 
-puts 'Done scraping data!'
+# puts 'Done scraping data!'
 
 
 puts 'Fixing Errors ...'
-file = File.read('errors.json')
-errors = JSON.parse(file)
+errors_fils = File.read('errors.json')
+errors = JSON.parse(errors_fils)
 
-end_errors = Marshal.load(Marshal.dump($errors))
+end_errors = Marshal.load(Marshal.dump(errors))
 
 errors.each do |error|
-	if error[:results] && error[:results].length > 1
+	if error["results"] && error["results"].length > 1
 		puts ' '
 		puts '-------------------------------'
-		puts error[:title]
-		error[:results].each_with_index do |result, i|
+		puts error["title"]
+		error["results"].each_with_index do |result, i|
 			puts "#{i+1} - #{result["original_title"]} - #{result["release_date"]}"
 		end
 		puts ' '
@@ -173,10 +173,10 @@ errors.each do |error|
 		puts '-------------------------------'
 		puts ' '
 		choice = gets.chomp.downcase
-		if choice != 'x' && choice.to_i > 0 && choice.to_i < error[:results].length
-			id = error[:results][choice.to_i - 1]["id"]
+		if choice != 'x' && choice.to_i > 0 && choice.to_i < error["results"].length + 1
+			id = error["results"][choice.to_i - 1]["id"]
 			data = get_data(id)
-			data[:folder_name] = error[:title]
+			data["folder_name"] = error["title"]
 			existing_data << data
 			end_errors.delete(error)
 		elsif choice == 'x'
