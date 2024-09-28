@@ -33,13 +33,13 @@ def get_movie_id(movie_title)
 	return false unless year
 	return false unless year.match?(/^\d{4}$/)
 
-	# url = "https://api.themoviedb.org/3/search/movie?api_key=#{API_KEY}&query=#{title}&year=#{year}&language=fr"
+	# url = "https://api.themoviedb.org/3/search/movie?api_key=#{API_KEY}&query=#{title}&year=#{year}&language=fr-FR"
 	base_url = "https://api.themoviedb.org/3/search/movie"
 	params = {
 		api_key: API_KEY,
-		query: movie_name,
+		query: title,
 		year: year,
-		language: "fr"
+		language: "fr-FR"
 	}
 	uri = URI(base_url)
 	uri.query = URI.encode_www_form(params)
@@ -56,7 +56,7 @@ end
 
 def get_data(movie_id)
 	data = {}
-	url_details = "https://api.themoviedb.org/3/movie/#{movie_id}?api_key=#{API_KEY}&language=fr"
+	url_details = "https://api.themoviedb.org/3/movie/#{movie_id}?api_key=#{API_KEY}&language=fr-FR"
 	uri_details = URI(url_details)
 	response_details = Net::HTTP.get(uri_details)
 	api_data_details = JSON.parse(response_details)
