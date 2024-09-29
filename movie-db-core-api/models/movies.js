@@ -1,37 +1,54 @@
 const mongoose = require('mongoose');
 
 const movieSchema = new mongoose.Schema({
-    title: {
+	id: { // ID IMBD // unique
+		type: Number,
+		required: true,
+		unique: true
+	},
+    original_title: {
         type: String,
-        // required: true
+        required: true
     },
-    original_language: {
+	folder_name: {
         type: String,
-        // required: true
+        required: true
     },
-    genres: {
+	original_language: {
+        type: String,
+        required: false
+    },
+	overview: {
+        type: String,
+        required: false
+    },
+	belongs_to_collection: {
+		type: Object,
+		required: false
+	},
+	release_date: {
+		type: String,
+		required: false
+	},
+	genres: {
         type: Array,
-        // required: true
+        required: false
     },
-    overview: {
+	vote_average: {
+		type: Number,
+		required: false
+	},
+	poster_url: {
         type: String,
-        // required: true
+        required: false
     },
-    poster_url: {
-        type: String,
-        // required: true
-    },
-    actors: {
+	actors: {
         type: Array,
-        // required: true
+        required: false
     },
     keywords: {
         type: Array,
-        // required: true
-    },
-    folder_name: {
-        type: String,
-        // required: true
+        required: false
     }
 })
 
