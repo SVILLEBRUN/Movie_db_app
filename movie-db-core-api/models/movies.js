@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const movieSchema = new mongoose.Schema({
+const moviesSchema = new mongoose.Schema({
 	id: { // ID IMBD // unique
 		type: Number,
 		required: true,
@@ -52,4 +52,4 @@ const movieSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Movie', movieSchema);
+module.exports = mongoose.model('Movies', moviesSchema);

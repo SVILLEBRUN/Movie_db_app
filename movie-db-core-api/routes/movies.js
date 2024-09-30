@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const Movie = require('../models/movies')
+const Movies = require('../models/movies')
 const movieCtrl = require('../controllers/movies')
 
 // Getting all movies
 router.get('/', async (req, res) => {
     try {
-        const movies = await Movie.find()
+        const movies = await Movies.find()
         res.json(movies)
     } catch (err) {
         res.status(500).json({ message: err.message })

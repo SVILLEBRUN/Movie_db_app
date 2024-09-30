@@ -1,7 +1,7 @@
-const Movie = require('../models/movies');
+const Movies = require('../models/movies');
 
 exports.createMovie = (req, res) => {
-	const movie = new Movie({
+	const movie = new Movies({
 		id: req.body.id,
 		original_title: req.body.original_title,
 		folder_name: req.body.folder_name,
