@@ -6,13 +6,13 @@
                 <div class="text-h6 q-mb-sm">Résultats :</div>
                 <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-sm" flat
                     bordered>
-                    <dic class="row no-wrap">
+                    <div class="row no-wrap">
                         <div class="img-container">
                             <q-img class="col-5" style="width: 100px;" fit="fill" :src="movie.poster_url" />
                         </div>
                         <div class="q-ma-sm">
                             <div class="row items-center q-mb-xs">
-                                <div class="movie-title text-bold">{{ movie.title }}</div>
+                                <div class="movie-title text-bold">{{ movie.original_title }}</div>
                                 <!-- Dans la db récupérer de meilleures dates -->
                                 <div class="text-caption text-bold text-italic text-grey-5 q-ml-md">{{
                                     movie.folder_name.slice(-6) }}</div>
@@ -23,7 +23,7 @@
                             <!-- TODO -->
                             <div class="self-end">Ici sera la liste d'acteurs pricipaux</div>
                         </div>
-                    </dic>
+                    </div>
                 </q-card>
             </div>
         </div>
@@ -65,13 +65,15 @@ export default defineComponent({
     methods: {
         async loadMovies () {
 			const response = await api.get('/api/movies')
+			console.log('Movies :', response.data)
 			this.all_movies = response.data
+			this.searchMovies()
         },
         searchMovies () {
             if (!this.term) this.search_results = this.all_movies
             else {
                 this.search_results = this.all_movies.filter((movie) => {
-                    return movie.title.toLowerCase().includes(this.term.toLowerCase()) || movie.overview.toLowerCase().includes(this.term.toLowerCase())
+                    return movie.original_title.toLowerCase().includes(this.term.toLowerCase()) || movie.overview.toLowerCase().includes(this.term.toLowerCase())
                 })
             }
             console.log(this.search_results)
