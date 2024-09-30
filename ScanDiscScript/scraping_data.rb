@@ -90,6 +90,8 @@ def get_data(movie_id)
 
 	data = Marshal.load(Marshal.dump(api_data_details)) 		# Deep copy pour éviter les problèmes de références
 
+  # original_language
+
 	base_poster_url = 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2'
 
 	# data[:title] = api_data_details["original_title"]
@@ -97,9 +99,24 @@ def get_data(movie_id)
 	data.delete("genres")
 	data[:genres] = api_data_details['genres'].map { |genre| genre['name'] }
 	# data[:overview] = api_data_details['overview']
-	if(base_poster_url && api_data_details['poster_path'])
-		data[:poster_url] = base_poster_url + api_data_details['poster_path']
+  
+  poster_path = false
+  if data[:original_language] == 'en'
+    url_details_en = "https://api.themoviedb.org/3/movie/#{movie_id}?api_key=#{API_KEY}"
+    uri_details_en = URI(url_details_en)
+    response_details_en = Net::HTTP.get(uri_details_en)
+    api_data_details_en = JSON.parse(response_details_en)
+    poster_path = api_data_details_en['poster_path']
+  end
+
+	if !poster_path
+    poster_path = api_data_details['poster_path']
 	end
+
+  if poster_path
+    data[:poster_url] = base_poster_url + poster_path
+  end
+
 
 	url_credits = "https://api.themoviedb.org/3/movie/#{movie_id}/credits?api_key=#{API_KEY}&language=fr-FR"
 	uri_credits = URI(url_credits)
