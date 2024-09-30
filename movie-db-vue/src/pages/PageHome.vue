@@ -32,6 +32,7 @@
 
 <script>
 import { defineComponent } from 'vue'
+import { api } from 'boot/axios'
 
 export default defineComponent({
     name: 'PageHome',
@@ -58,17 +59,13 @@ export default defineComponent({
         }
     },
     mounted () {
-        this.loadMovies()
+		// TODO faire un fichier utils avec les erreurs pour générer des notification
+        this.loadMovies().catch((err) => console.log(err))
     },
     methods: {
-        loadMovies () {
-            fetch('/database/movies_data.json')
-                .then((res) => res.json())
-                .then((data) => {
-                    this.all_movies = data
-                    console.log(this.all_movies)
-                    this.searchMovies()
-                })
+        async loadMovies () {
+			const response = await api.get('/api/movies')
+			this.all_movies = response.data
         },
         searchMovies () {
             if (!this.term) this.search_results = this.all_movies

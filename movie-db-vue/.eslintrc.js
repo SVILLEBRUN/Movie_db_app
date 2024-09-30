@@ -72,7 +72,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
 
 	// Custom rules 
-	'indent': ['error', 4],
+	'indent': 'off',
+	'no-tabs': 'off',
     
     'prefer-promise-reject-errors': 'off',
 
