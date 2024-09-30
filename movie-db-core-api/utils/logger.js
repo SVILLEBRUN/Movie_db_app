@@ -21,7 +21,7 @@ const logger = createLogger({
         customFormat
       )
     }),
-    new transports.File({ filename: 'logs/app.log' }) // Enregistrement dans un fichier
+    // new transports.File({ filename: 'logs/app.log' }) // Enregistrement dans un fichier
   ]
 });
 
