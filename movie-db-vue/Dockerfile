@@ -1,12 +1,12 @@
 FROM node:lts-alpine as development-stage
 WORKDIR /app
 COPY package*.json ./
-RUN yarn global add @quasar/cli
+RUN npm install -g @quasar/cli
 COPY . .
 
 # build stage
 FROM development-stage as build-stage
-RUN yarn
+RUN npm install
 RUN quasar build
 
 # production stage

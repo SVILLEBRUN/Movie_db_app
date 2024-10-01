@@ -9,7 +9,7 @@ services:
         restart: always
         volumes:
             - ./movie-db-vue:/app
-        command: /bin/sh -c "yarn && quasar dev"
+        command: /bin/sh -c "npm install && quasar dev"
     movie-db-core-api:
         container_name: movie-db-core-api
         build:
