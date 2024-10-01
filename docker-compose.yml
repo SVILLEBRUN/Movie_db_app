@@ -1,4 +1,3 @@
-version: "3.7"
 services:
     movie-db-vue:
         container_name: movie-db-vue
