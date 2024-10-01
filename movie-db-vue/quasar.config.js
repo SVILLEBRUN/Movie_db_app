@@ -162,9 +162,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar App',
-        description: 'A Quasar Project',
+        name: 'Movie DB APP',
+        short_name: 'Movie DB',
+        description: 'Personnal movie database',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
