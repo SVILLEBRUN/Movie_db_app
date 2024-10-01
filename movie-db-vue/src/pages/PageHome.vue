@@ -1,27 +1,36 @@
 <template>
     <q-page class="text-grey-1 constrain">
         <div class="row no-wrap" style="min-height:100vh">
+			<!-- TODO -->
             <div class="search bg-grey-9 q-pa-sm q-mr-sm">Volet de recherche</div>
-            <div class="bg-grey-9 q-pa-sm" style="width:100%">
-                <div class="text-h6 q-mb-sm">Résultats :</div>
-                <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-sm" flat
-                    bordered>
+            <div class="bg-grey-9 q-pa-sm col" style="width:100%">
+                <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-md" flat bordered >
                     <div class="row no-wrap">
                         <div class="img-container">
-                            <q-img class="col-5" style="width: 100px;" fit="fill" :src="movie.poster_url" />
+                            <q-img class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="movie.poster_url" />
                         </div>
-                        <div class="q-ma-sm">
+                        <div class="q-ma-sm overflow-hidden col" style="position: relative;">
                             <div class="row items-center q-mb-xs">
                                 <div class="movie-title text-bold">{{ movie.original_title }}</div>
-                                <!-- Dans la db récupérer de meilleures dates -->
-                                <div class="text-caption text-bold text-italic text-grey-5 q-ml-md">{{
-                                    movie.folder_name.slice(-6) }}</div>
+                                <div class="text-caption text-bold text-italic text-grey-5 q-ml-md">
+									({{ date.formatDate(movie.release_date, 'YYYY') }})
+								</div>
                             </div>
-                            <!-- TODO: -->
-                            <div class="q-mb-sm">Ici sera une liste de genres</div>
-                            <div class="movie-overview ellipsis-2-lines q-mb-sm">{{ movie.overview }}</div>
-                            <!-- TODO -->
-                            <div class="self-end">Ici sera la liste d'acteurs pricipaux</div>
+                            <div class="q-mb-sm text-caption text-bold text-grey-5">{{ movie.genres.join(' - ') }}</div>
+                            <div class="movie-overview ellipsis-3-lines">{{ movie.overview }}</div>
+							<div class="text-bold text-caption ellipsis" style="position: absolute; bottom: 0; right: 0 ; left: 0; line-height: 1;">
+								<template v-for="(actor, a_idx) in movie.actors" :key="a_idx">
+									<!-- TODO: lien vers la fiche acteur  -->
+									<span class="actor-name">
+										{{ actor.name }}
+										<q-tooltip :offset="[ 0, 4 ]" v-if="actor.profile_path">
+											<q-img style="width: 70px;" :src="actor.profile_path" />
+										</q-tooltip>
+									</span>
+									<span v-if="a_idx < movie.actors.length"> - </span>
+								</template>
+
+							</div>
                         </div>
                     </div>
                 </q-card>
@@ -33,6 +42,7 @@
 <script>
 import { defineComponent } from 'vue'
 import { api } from 'boot/axios'
+import { date } from 'quasar'
 
 export default defineComponent({
     name: 'PageHome',
@@ -44,7 +54,7 @@ export default defineComponent({
     },
     setup () {
         return {
-            //
+            date
         }
     },
     data () {
@@ -82,7 +92,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .img-container {
     padding: 4px;
     display: flex;
@@ -97,5 +107,19 @@ export default defineComponent({
 .movie-title {
     font-size: 20px;
     line-height: 1.1;
+	cursor: pointer;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.movie-title:hover {
+	color: $grey-5;
+}
+
+.actor-name {
+	cursor: pointer;
+}
+
+.actor-name:hover {
+	text-decoration: underline;
 }
 </style>
