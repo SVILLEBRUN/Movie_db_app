@@ -52,23 +52,17 @@ router.get('/load_movies_data_in_database', async(req, res) => {
 
 
 
-/*
-	    const mongo_client = await mongo.getClient();
-		let bulk = mongo_client.collection('staff_postes').initializeUnorderedBulkOp()
-		const ids = []
-		let bulk_execute_flag = false
-		for(let poste of changes_map) {
-			const changes = poste.changes;
-
-
-			bulk.find({ _id: _id }).updateOne({ $set: changes });
-			bulk_execute_flag = true
-		}
-		// Revoie une erreur si le bulk est vide
-		if(bulk_execute_flag) await bulk.execute();
-*/
-
 // Modification de donnée dans la base 
+// Crédits du film : https://api.themoviedb.org/3/movie/49538/credits?api_key=fde5eec290651347ef46855a96301aaa&language=fr-FR
+// Recherche d'un film : https://api.themoviedb.org/3/movie/49538?api_key=fde5eec290651347ef46855a96301aaa&language=fr-FR
+// Keywords : "https://api.themoviedb.org/3/movie/49538/keywords?api_key=fde5eec290651347ef46855a96301aaa&language=fr-FR"
+
+
+/*
+	TODO :
+		- Améliorer les données acteurs
+		- Améliorer les données genres
+*/
 router.get('/fix_data_in_db', async(req, res) => {
 	try {
 		logger.info('fix_data_in_db - starting')

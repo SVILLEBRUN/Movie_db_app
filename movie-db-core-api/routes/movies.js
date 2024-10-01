@@ -6,7 +6,8 @@ const movieCtrl = require('../controllers/movies')
 // Getting all movies
 router.get('/', async (req, res) => {
     try {
-        const movies = await Movies.find()
+		// const movies = await Movies.find()
+        const movies = await Movies.find().limit(20)
         res.json(movies)
     } catch (err) {
         res.status(500).json({ message: err.message })
