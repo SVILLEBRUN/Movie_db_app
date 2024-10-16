@@ -54,7 +54,8 @@ module.exports = configure(function (ctx) {
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
 	  env: {
-		VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'https://movie-db-core-api.fly.dev'
+		// VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'https://movie-db-core-api.fly.dev' // Pour le déploiement sur Fly.io
+        VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'http://77.207.128.108:3000' // Pour le déploiement sur raspberry pi
 	  },
 
       // transpile: false,
