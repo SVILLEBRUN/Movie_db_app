@@ -21,7 +21,7 @@ jobs:
       run: docker push sebvillebrun/movie-db-app:movie-db-vue:$(date +%s)
 
     - name: Build movie-db-core-api image
-      run: docker build ./movie-db-core-api --file ./movie-db-core-api/Dockerfile --target production-stage --tag movie-db-core-api:$(date +%s)
+      run: docker build ./movie-db-core-api --file ./movie-db-core-api/Dockerfile --target production-stage --tag movie-db-core-api-$(date +%s)
 
     - name: Push movie-db-core-api image
-      run: docker push sebvillebrun/movie-db-app:movie-db-core-api:$(date +%s)
+      run: docker push sebvillebrun/movie-db-app:movie-db-core-api-$(date +%s)
