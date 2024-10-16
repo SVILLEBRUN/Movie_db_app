@@ -23,13 +23,13 @@ jobs:
       run: echo $password | docker login -u $username --password-stdin
 
     - name: Build movie-db-vue image
-      run: docker build ./movie-db-vue --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag ${{secrets.DOCKERHUB_USERNAME}}/movie-db-app:latest_vue
+      run: docker build ./movie-db-vue --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue
 
     - name: Push movie-db-vue image
-      run: docker push ${{secrets.DOCKERHUB_USERNAME}}/movie-db-app:latest_vue
+      run: docker push sebvillebrun/movie-db-app:latest_vue
 
     - name: Build movie-db-core-api image
-      run: docker build ./movie-db-core-api --file ./movie-db-core-api/Dockerfile --target production-stage --tag ${{secrets.DOCKERHUB_USERNAME}}/movie-db-app:latest_core-api
+      run: docker build ./movie-db-core-api --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api
 
     - name: Push movie-db-core-api image
-      run: docker push ${{secrets.DOCKERHUB_USERNAME}}/movie-db-app:latest_core-api
+      run: docker push sebvillebrun/movie-db-app:latest_core-api
