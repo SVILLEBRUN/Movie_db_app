@@ -1,0 +1,69 @@
+{
+	"version": "2.0.0",
+	"presentation": {
+		"echo": true,
+		"reveal": "always",
+		"focus": true,
+		"panel": "shared"
+	},
+	"tasks": [
+		{
+			"label": "npm update all",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"npm update movie_db_core_api",
+				"npm update movie_db_vue"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "npm update movie_db_core_api",
+			"command": "npm",
+			"type": "shell",
+			"args": ["update"],
+			"options":{
+				"cwd": "movie-db-core-api/",
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "npm update movie_db_vue",
+			"command": "npm",
+			"type": "shell",
+			"args": ["update"],
+			"options":{
+				"cwd": "movie-db-vue/",
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "npm install all",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"npm install movie_db_core_api",
+				"npm install movie_db_vue"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "npm install movie_db_core_api",
+			"command": "npm",
+			"type": "shell",
+			"args": ["install"],
+			"options":{
+				"cwd": "movie-db-core-api/",
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "npm install movie_db_vue",
+			"command": "npm",
+			"type": "shell",
+			"args": ["install"],
+			"options":{
+				"cwd": "movie-db-vue/",
+			},
+			"problemMatcher": []
+		}
+	]
+}
