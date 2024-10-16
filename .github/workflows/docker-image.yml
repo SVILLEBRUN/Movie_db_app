@@ -1,0 +1,22 @@
+name: Build Docker Images
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build movie-db-vue image
+      run: docker build . --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag movie-db-vu:$(date +%s) ./movie-db-vue
+
+    - name: Build movie-db-core-api image
+      run: docker build . --file ./movie-db-core-api/Dockerfile --target production-stage --tag movie-db-vu:$(date +%s) ./movie-db-core-api
+    
