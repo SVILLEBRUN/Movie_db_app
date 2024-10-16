@@ -15,6 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
     - name: login to docker hub
       id: docker-hub
       env:
@@ -22,14 +25,8 @@ jobs:
         password: ${{secrets.DOCKERHUB_PASSWORD}}
       run: echo $password | docker login -u $username --password-stdin
 
-    - name: Build movie-db-vue image
-      run: docker build ./movie-db-vue --platform linux/amd64,linux/arm64 --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue
+    - name: Build and push movie-db-vue image
+      run: docker buildx build ./movie-db-vue --platform linux/amd64,linux/arm64 --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue --push
 
-    - name: Push movie-db-vue image
-      run: docker push sebvillebrun/movie-db-app:latest_vue
-
-    - name: Build movie-db-core-api image
-      run: docker build ./movie-db-core-api --platform linux/amd64,linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api
-
-    - name: Push movie-db-core-api image
-      run: docker push sebvillebrun/movie-db-app:latest_core-api
+    - name: Build and push movie-db-core-api image
+      run: docker buildx build ./movie-db-core-api --platform linux/amd64,linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api --push
