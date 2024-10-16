@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build movie-db-vue image
-      run: docker build . --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag movie-db-vu:$(date +%s) ./movie-db-vue
+      run: docker build . --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag movie-db-vu:$(date +%s)
 
     - name: Build movie-db-core-api image
-      run: docker build . --file ./movie-db-core-api/Dockerfile --target production-stage --tag movie-db-vu:$(date +%s) ./movie-db-core-api
+      run: docker build . --file ./movie-db-core-api/Dockerfile --target production-stage --tag movie-db-vu:$(date +%s)
     
