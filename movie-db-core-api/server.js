@@ -25,4 +25,3 @@ app.use('/api/movies', moviesRouter)
 app.use('/api/config', configRouter)
 
 app.listen(3000, '0.0.0.0', () => console.log('Server Started'))
-console.log('Server Started')
