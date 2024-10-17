@@ -35,9 +35,9 @@ jobs:
     #       echo "changed=false" >> $GITHUB_ENV
     #     fi
 
-    # - name: Build and push movie-db-vue image
-    # #   if: ${{ steps.check_vue.outputs.changed == 'true' }}
-    #   run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue --push
+    - name: Build and push movie-db-vue image
+    #   if: ${{ steps.check_vue.outputs.changed == 'true' }}
+      run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile_local  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue --push
 
     # - name: Check for changes in movie-db-core-api
     #   id: check_api
