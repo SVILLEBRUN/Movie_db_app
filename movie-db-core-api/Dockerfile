@@ -11,7 +11,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     npm ci --include=dev
 USER node
 COPY --chown=node:node . .
-CMD npm run devStart
+CMD ["npm", "run", "devStart"]
 
 FROM base AS production-stage
 RUN --mount=type=bind,source=package.json,target=package.json \
@@ -19,5 +19,6 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm ci --omit=dev
 USER node
+RUN npm install dotenv
 COPY . .
-CMD node -r dotenv/config server.js
+CMD ["node", "-r", "dotenv/config", "server.js"]
