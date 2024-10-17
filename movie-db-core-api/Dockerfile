@@ -16,4 +16,4 @@ COPY package*.json ./
 RUN npm ci --omit=dev
 USER node
 COPY . .
-CMD ["node", "server.js"]
+CMD ["node", "run", "start"]
