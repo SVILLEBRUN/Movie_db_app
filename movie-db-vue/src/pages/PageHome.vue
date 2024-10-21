@@ -7,7 +7,7 @@
                 <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-md" flat bordered >
                     <div class="row no-wrap">
                         <div class="img-container">
-                            <q-img class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="movie.poster_url" />
+                            <q-img class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="image_proxy_URL+movie.poster_url" />
                         </div>
                         <div class="q-ma-sm overflow-hidden col" style="position: relative;">
                             <div class="row items-center q-mb-xs">
@@ -24,7 +24,7 @@
 									<span class="actor-name">
 										{{ actor.name }}
 										<q-tooltip :offset="[ 0, 4 ]" v-if="actor.profile_path">
-											<q-img style="width: 70px;" :src="actor.profile_path" />
+											<q-img style="width: 70px;" :src="image_proxy_URL+actor.profile_path" />
 										</q-tooltip>
 									</span>
 									<span v-if="a_idx < movie.actors.length"> - </span>
@@ -41,7 +41,6 @@
 
 <script>
 import { defineComponent } from 'vue'
-import { api } from 'boot/axios'
 import { date } from 'quasar'
 
 export default defineComponent({
@@ -54,7 +53,9 @@ export default defineComponent({
     },
     setup () {
         return {
-            date
+            date,
+            // TODO : vérifier l'url pour les apis / ON peut vour pour ne pas appeler .$api mais plus .$proxy
+            image_proxy_URL: process.env.VUE_APP_API_URL + '/proxy/image?url='
         }
     },
     data () {
@@ -74,7 +75,7 @@ export default defineComponent({
     },
     methods: {
         async loadMovies () {
-			const response = await api.get('/api/movies')
+			const response = await this.$api.get('/api/movies')
 			console.log('Movies :', response.data)
 			this.all_movies = response.data
 			this.searchMovies()
