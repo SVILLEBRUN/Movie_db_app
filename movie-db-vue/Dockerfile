@@ -16,4 +16,5 @@ COPY --from=build-stage /app/dist/spa /usr/share/nginx/html
 # TODO : retirer la ligne suivante quand on utilise le docker-compose ou quand on est en dehors de fly.io
 # COPY ./nginx_vuejs.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "build"]
