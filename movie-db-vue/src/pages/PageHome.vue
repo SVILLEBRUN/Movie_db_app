@@ -75,7 +75,7 @@ export default defineComponent({
     },
     methods: {
         async loadMovies () {
-			const response = await this.$api.get('/api/movies')
+			const response = await this.$api.get('/movies')
 			console.log('Movies :', response.data)
 			this.all_movies = response.data
 			this.searchMovies()

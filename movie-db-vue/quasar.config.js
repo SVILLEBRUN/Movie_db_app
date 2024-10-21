@@ -55,11 +55,11 @@ module.exports = configure(function (ctx) {
 
 	  env: {
 		// VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'https://movie-db-core-api.fly.dev' // Pour le déploiement sur Fly.io
-        VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'http://77.207.128.108:3000' // Pour le déploiement sur raspberry pi
+        VUE_APP_API_URL: ctx.dev ? 'http://localhost/movie-db-app/api/' : 'http://amodifier_dans_qasar_conf' // Pour le déploiement sur raspberry pi
 	  },
 
       // transpile: false,
-      // publicPath: '/',
+      publicPath: '/movie-db-app/', // For the deployment on the Raspberry Pi with nginx
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
