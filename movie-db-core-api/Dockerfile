@@ -5,6 +5,7 @@ WORKDIR /app
 EXPOSE 3000
 
 FROM base AS development-stage
+ENV NODE_ENV=development
 COPY package*.json ./
 RUN npm ci --include=dev
 COPY . .
@@ -12,6 +13,7 @@ USER node
 CMD ["npm", "run", "devStart"]
 
 FROM base AS production-stage
+ENV NODE_ENV=production
 COPY package*.json ./
 RUN npm ci --omit=dev
 USER node
