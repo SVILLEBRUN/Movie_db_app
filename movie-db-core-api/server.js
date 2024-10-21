@@ -15,10 +15,8 @@ db.once('open', () => console.log('Connected to Database'))
 // Routes
 const moviesRouter = require('./routes/movies')
 const configRouter = require('./routes/config')
-const proxyRouter = require('./routes/proxy')
-app.use('/api/movies', moviesRouter)
-app.use('/api/config', configRouter)
-app.use('/proxy', proxyRouter)
+app.use('/movie-db-app/api/movies', moviesRouter)
+app.use('/movie-db-app/api/config', configRouter)
 
 // Enable CORS
 const corsOptions = {
