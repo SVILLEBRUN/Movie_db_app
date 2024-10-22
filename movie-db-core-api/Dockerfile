@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm ci --include=dev
 COPY . .
 USER node
-CMD ["npm", "run", "devStart"]
+CMD ["npm", "run", "dev"]
 
 FROM base AS production-stage
 ENV NODE_ENV=production

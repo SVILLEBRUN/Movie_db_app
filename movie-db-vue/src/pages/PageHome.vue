@@ -55,7 +55,7 @@ export default defineComponent({
         return {
             date,
             // TODO : vérifier l'url pour les apis / ON peut vour pour ne pas appeler .$api mais plus .$proxy
-            image_proxy_URL: process.env.VUE_APP_API_URL + '/proxy/image?url='
+            image_proxy_URL: process.env.VUE_APP_PROXY_URL + '/images?url='
         }
     },
     data () {
