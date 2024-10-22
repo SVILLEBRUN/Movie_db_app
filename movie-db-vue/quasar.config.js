@@ -59,7 +59,7 @@ module.exports = configure(function (ctx) {
 	  },
 
       // transpile: false,
-      publicPath: '/movie-db-app/', // For the deployment on the Raspberry Pi with nginx
+      // publicPath: '/',
 
       // Add dependencies for transpiling with Babel (Array of string/regex)
       // (from node_modules, which are by default not transpiled).
