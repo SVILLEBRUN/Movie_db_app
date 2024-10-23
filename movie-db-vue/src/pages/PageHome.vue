@@ -1,13 +1,14 @@
 <template>
     <q-page class="text-grey-1 constrain">
         <div class="row no-wrap" style="min-height:100vh">
-			<!-- TODO -->
+            <!-- TODO: Filtre pour le volet de recherche -->
             <div class="search bg-grey-9 q-pa-sm q-mr-sm">Volet de recherche</div>
             <div class="bg-grey-9 q-pa-sm col" style="width:100%">
-                <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-md" flat bordered >
+                <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-md" flat bordered>
                     <div class="row no-wrap">
                         <div class="img-container">
-                            <q-img class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="image_proxy_URL+movie.poster_url" />
+                            <q-img v-if="false" class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="image_proxy_URL+movie.poster_url" />
+                            <q-img v-else class="col-5 cursor-pointer" style="width: 100px;" fit="fill" src="images/no_poster_available.png" />
                         </div>
                         <div class="q-ma-sm overflow-hidden col" style="position: relative;">
                             <div class="row items-center q-mb-xs">
@@ -29,7 +30,6 @@
 									</span>
 									<span v-if="a_idx < movie.actors.length"> - </span>
 								</template>
-
 							</div>
                         </div>
                     </div>
@@ -54,7 +54,6 @@ export default defineComponent({
     setup () {
         return {
             date,
-            // TODO : vérifier l'url pour les apis / ON peut vour pour ne pas appeler .$api mais plus .$proxy
             image_proxy_URL: process.env.VUE_APP_PROXY_URL + '/images?url='
         }
     },
@@ -99,6 +98,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 158px;
 }
 
 .search {
