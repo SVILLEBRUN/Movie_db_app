@@ -10,19 +10,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+      - uses: docker/setup-buildx-action@v2
+        name: Set up Docker Buildx
 
-    - name: login to docker hub
-      id: docker-hub
-      env:
-        username: ${{secrets.DOCKERHUB_USERNAME}}
-        password: ${{secrets.DOCKERHUB_PASSWORD}}
-      run: echo $password | docker login -u $username --password-stdin
-    - name: Build and push movie-db-vue image
-      run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_vue --push
-    - name: Build and push movie-db-core-api image
-      run: docker buildx build ./movie-db-core-api --platform linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api --push
+      - name: login to docker hub
+        id: docker-hub
+        env:
+          username: ${{secrets.DOCKERHUB_USERNAME}}
+          password: ${{secrets.DOCKERHUB_PASSWORD}}
+        run: echo $password | docker login -u $username --password-stdin
+
+      - name: Build and push movie-db-vue image
+        run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_vue --push
+
+      - name: Build and push movie-db-core-api image
+        run: docker buildx build ./movie-db-core-api --platform linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api --push
