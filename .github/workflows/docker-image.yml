@@ -1,10 +1,10 @@
 name: Build Docker Images
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+	push:
+		branches: [ "master" ]
+	pull_request:
+		branches: [ "master" ]
 
 jobs:
 
@@ -13,42 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+		- uses: actions/checkout@v4
 
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+		- name: Set up Docker Buildx
+			uses: docker/setup-buildx-action@v2
 
-    - name: login to docker hub
-      id: docker-hub
-      env:
-        username: ${{secrets.DOCKERHUB_USERNAME}}
-        password: ${{secrets.DOCKERHUB_PASSWORD}}
-      run: echo $password | docker login -u $username --password-stdin
+		- name: login to docker hub
+			id: docker-hub
+			env:
+				username: ${{secrets.DOCKERHUB_USERNAME}}
+				password: ${{secrets.DOCKERHUB_PASSWORD}}
+			run: echo $password | docker login -u $username --password-stdin
 
-    # - name: Check for changes in movie-db-vue
-    #   id: check_vue
-    #   run: |
-    #     git fetch origin master
-    #     if git diff --name-only origin/master | grep -q '^movie-db-vue/'; then
-    #       echo "changed=true" >> $GITHUB_ENV
-    #     else
-    #       echo "changed=false" >> $GITHUB_ENV
-    #     fi
+		- name: Build and push movie-db-vue image
+			run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue --push
 
-    - name: Build and push movie-db-vue image
-    #   if: ${{ steps.check_vue.outputs.changed == 'true' }}
-      run: docker buildx build ./movie-db-vue --platform linux/arm64 --file ./movie-db-vue/Dockerfile  --target production-stage  --tag sebvillebrun/movie-db-app:latest_vue --push
-
-    # - name: Check for changes in movie-db-core-api
-    #   id: check_api
-    #   run: |
-    #     git fetch origin master
-    #     if git diff --name-only origin/master | grep -q '^movie-db-core-api/'; then
-    #       echo "changed=true" >> $GITHUB_ENV
-    #     else
-    #       echo "changed=false" >> $GITHUB_ENV
-    #     fi
-
-    - name: Build and push movie-db-core-api image
-    #   if: ${{ steps.check_api.outputs.changed == 'true' }}
-      run: docker buildx build ./movie-db-core-api --platform linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api --push
+		- name: Build and push movie-db-core-api image
+			run: docker buildx build ./movie-db-core-api --platform linux/arm64 --file ./movie-db-core-api/Dockerfile --target production-stage --tag sebvillebrun/movie-db-app:latest_core-api --push
