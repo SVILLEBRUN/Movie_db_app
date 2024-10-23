@@ -92,7 +92,7 @@ def get_data(movie_id)
 
   # original_language
 
-	base_poster_url = 'https://www.themoviedb.org/t/p/w300_and_h450_bestv2'
+	base_poster_url = 'https://image.tmdb.org/t/p/w300_and_h450_bestv2'
 
 	# data[:title] = api_data_details["original_title"]
 	# data[:original_language] = api_data_details['original_language']
