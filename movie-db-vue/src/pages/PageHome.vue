@@ -7,7 +7,7 @@
                 <q-card v-for="(movie, idx) in search_results" :key="idx" class="my-card bg-grey-8 q-mb-md" flat bordered>
                     <div class="row no-wrap">
                         <div class="img-container">
-                            <q-img v-if="false" class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="image_proxy_URL+movie.poster_url" />
+                            <q-img v-if="movie.poster_url" class="col-5 cursor-pointer" style="width: 100px;" fit="fill" :src="image_proxy_URL+movie.poster_url" />
                             <q-img v-else class="col-5 cursor-pointer" style="width: 100px;" fit="fill" src="images/no_poster_available.png" />
                         </div>
                         <div class="q-ma-sm overflow-hidden col" style="position: relative;">
