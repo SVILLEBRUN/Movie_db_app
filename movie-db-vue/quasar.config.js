@@ -56,7 +56,7 @@ module.exports = configure(function (ctx) {
       env: {
 		// VUE_APP_API_URL: ctx.dev ? 'http://localhost:3000' : 'https://movie-db-core-api.fly.dev' // Pour le déploiement sur Fly.io
         VUE_APP_API_URL: ctx.dev ? 'http://localhost/movie-db-app/api/' : 'http://77.207.128.108/movie-db-app/api/', // Pour le déploiement sur raspberry pi
-        VUE_APP_PROXY_URL: ctx.dev ? 'http://localhost/proxy' : 'http://77.207.128.108/proxy/'
+        VUE_APP_PROXY_URL: ctx.dev ? 'http://localhost/proxy' : 'http://77.207.128.108/proxy'
       },
 
       // transpile: false,
