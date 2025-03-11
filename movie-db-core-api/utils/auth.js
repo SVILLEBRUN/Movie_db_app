@@ -7,7 +7,7 @@ const setCookie = (res, user) => {
     const token = jwt.sign(token_payload, process.env.JWT_SECRET);
 
     return res.cookie('movie_db_nuxt_token', token, {
-        // httpOnly: true,
+        httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict',
         maxAge: 1000 * 60 * 60 // 1 hour
@@ -16,7 +16,7 @@ const setCookie = (res, user) => {
 
 const removeCookie = (res) => {
     return res.clearCookie('movie_db_nuxt_token', {
-        // httpOnly: true,
+        httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         sameSite: 'strict'
     });
