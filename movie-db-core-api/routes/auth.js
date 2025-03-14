@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Users = require('../models/users');
-const userCtrl = require('../controllers/users');
+const userController = require('../controllers/users');
 const bcrypt = require('bcrypt');
 const authUtils = require('../utils/auth')
 const jwt = require('jsonwebtoken');
@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 
 
 
-router.post('/register', userCtrl.createUser)
+router.post('/register', userController.createUser)
 
 
 router.post('/login', async (req, res) => {

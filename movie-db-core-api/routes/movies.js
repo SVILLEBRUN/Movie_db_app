@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Movies = require('../models/movies')
-const movieCtrl = require('../controllers/movies')
+const movieController = require('../controllers/movies')
 
 // Getting all movies
 router.get('/', async (req, res) => {
@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
 })
 
 // Creating one movie
-router.post('/', movieCtrl.createMovie)
+router.post('/', movieController.createMovie)
 
 // Updating one movie
 router.patch('/:id', (req, res) => {

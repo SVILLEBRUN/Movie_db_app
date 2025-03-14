@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Movies = require('../models/movies')
-const movieCtrl = require('../controllers/movies')
+// const movieController = require('../controllers/movies')
 const logger = require('../utils/logger')
 
 
