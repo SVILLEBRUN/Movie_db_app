@@ -3,6 +3,7 @@ const router = express.Router()
 const Movies = require('../models/movies')
 const movieController = require('../controllers/movies')
 
+// TODO: Put this in a controller
 // Getting all movies
 router.get('/', async (req, res) => {
     try {
@@ -14,19 +15,23 @@ router.get('/', async (req, res) => {
     }
 })
 
+// TODO: Put this in a controller
 // Getting one movie
 router.get('/:id', (req, res) => {
     return res.send(req.params.id)
 })
 
+// TODO: Put this in a controller
 // Creating one movie
 router.post('/', movieController.createMovie)
 
+// TODO: Put this in a controller
 // Updating one movie
 router.patch('/:id', (req, res) => {
 
 })
 
+// TODO: Put this in a controller
 // Deleting one movie
 router.delete('/:id', (req, res) => {
 
