@@ -12,7 +12,7 @@ exports.createUser = async (req, res) => {
 
         authUtils.setCookie(res, user)
 
-        res.status(201).json({ 
+        return res.status(201).json({ 
             message: 'User registered', 
             user: {
                 _id: user._id,
@@ -23,9 +23,9 @@ exports.createUser = async (req, res) => {
         });
     } catch (err) {
         if(err.code === 11000) {
-            res.status(409).json({ message: 'User already exists' });
+            return res.status(409).json({ message: 'User already exists' });
         } else {
-            res.status(500).json({ message: err.message });
+            return res.status(500).json({ message: err.message });
         }
     }
 }

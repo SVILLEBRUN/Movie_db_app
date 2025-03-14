@@ -42,11 +42,11 @@ router.get('/load_movies_data_in_database', async(req, res) => {
 			}
 		}
 		logger.info('load_movies_data_in_database - done')
-		res.status(200).json({ message: 'Movies data loaded in database' })
+		return res.status(200).json({ message: 'Movies data loaded in database' })
 	} catch (err) {
 		logger.error(err)
 		console.log(err)
-		res.status(500).json({ message: err.message })
+		return res.status(500).json({ message: err.message })
 	}
 })
 
@@ -96,11 +96,11 @@ router.get('/fix_data_in_db', async(req, res) => {
 		}
 		if(bulk_to_execute)	bulk.execute();
 		logger.info('fix_data_in_db - done')
-		res.status(200).json({ message: 'Movies data updated' })
+		return res.status(200).json({ message: 'Movies data updated' })
 	} catch(err) {
 		logger.error(err)
 		console.log(err)
-		res.status(500).json({ message: err.message })
+		return res.status(500).json({ message: err.message })
 	}
 })
 

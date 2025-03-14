@@ -19,7 +19,7 @@ router.post('/login', async (req, res) => {
         if(user && await bcrypt.compare(password, user.password)) {
             authUtils.setCookie(res, user)
             
-            res.status(200).json({ 
+            return res.status(200).json({ 
                 message: 'User logged in', 
                 user: {
                     _id: user._id,
@@ -29,10 +29,10 @@ router.post('/login', async (req, res) => {
                 } 
             });
         } else {
-            res.status(401).json({ message: 'Unauthorized' });
+            return res.status(401).json({ message: 'Unauthorized' });
         }
     } catch (err) {
-        res.status(500).json({ message: err.message })
+        return res.status(500).json({ message: err.message })
     }
 })
 
@@ -42,7 +42,7 @@ router.get('/check-auth', (req, res) => {
     if(!token) return res.status(401).json({ message: 'Unauthorized' });
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        res.status(200).json({ message: 'User is authenticated', user: decoded });
+        return res.status(200).json({ message: 'User is authenticated', user: decoded });
     } catch (err) {
         return res.status(401).json({ message: 'Unauthorized' });
     }
@@ -51,7 +51,7 @@ router.get('/check-auth', (req, res) => {
 
 router.post('/logout', (req, res) => {
     authUtils.removeCookie(res)
-    res.status(200).json({ message: 'User logged out' });
+    return res.status(200).json({ message: 'User logged out' });
 })
 
 module.exports = router

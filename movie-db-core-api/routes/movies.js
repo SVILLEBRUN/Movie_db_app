@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
 		// const movies = await Movies.find()
         const movies = await Movies.find().limit(20)
-        res.json(movies)
+        return res.json(movies)
     } catch (err) {
         res.status(500).json({ message: err.message })
     }
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 
 // Getting one movie
 router.get('/:id', (req, res) => {
-    res.send(req.params.id)
+    return res.send(req.params.id)
 })
 
 // Creating one movie
