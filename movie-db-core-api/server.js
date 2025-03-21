@@ -33,4 +33,4 @@ app.use('/movie-db-app/api/auth', authRouter)
 
 
 
-app.listen(3000, '0.0.0.0', () => console.log('Server Started'))
+app.listen(3000, '0.0.0.0', () => console.log('Server Started on port 3000'))
