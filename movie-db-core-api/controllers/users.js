@@ -22,6 +22,7 @@ exports.createUser = async (req, res) => {
                 email: user.email,
                 first_name: user.first_name,
                 last_name: user.last_name,
+                avatar: user.avatar || null,
                 authMethod: 'local'
             }
         });
@@ -48,6 +49,7 @@ exports.googleRegister = async (req, res) => {
         if(!payload.given_name || !payload.family_name || !payload.email) {
             return res.status(500).json({ message: 'Google information missing' });
         }
+        
         const user = new Users({ email: payload.email, first_name: payload.given_name, last_name: payload.family_name, authMethod: 'google' });
         await user.save();
 
@@ -60,6 +62,7 @@ exports.googleRegister = async (req, res) => {
                 email: user.email,
                 first_name: user.first_name,
                 last_name: user.last_name,
+                avatar: user.avatar || null,
                 authMethod: 'google'
             }
         });
@@ -87,6 +90,7 @@ exports.login = async (req, res) => {
                     email: user.email,
                     first_name: user.first_name,
                     last_name: user.last_name,
+                    avatar: user.avatar || null,
                     authMethod: 'local'
                 } 
             });
@@ -120,6 +124,7 @@ exports.googleLogin = async (req, res) => {
                     email: user.email,
                     first_name: user.first_name,
                     last_name: user.last_name,
+                    avatar: user.avatar || null,
                     authMethod: 'google'
                 } 
             });

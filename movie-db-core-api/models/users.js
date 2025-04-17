@@ -20,6 +20,10 @@ const usersSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    avatar: {
+        type: String,
+        required: false
+    },
     authMethod: {
         type: String,
         required: true

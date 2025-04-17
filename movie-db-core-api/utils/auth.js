@@ -3,7 +3,14 @@ const jwt = require('jsonwebtoken');
 const setCookie = (res, user) => {
     if(!user || !user.email || !user._id) return res.status(401).json({ message: 'Invalid user data, please try to login again' });
     
-    const token_payload = { email: user.email, _id: user._id, first_name: user.first_name, last_name: user.last_name };
+    const token_payload = { 
+        email: user.email, 
+        _id: user._id, 
+        first_name: user.first_name, 
+        last_name: user.last_name, 
+        avatar: user.avatar || null, 
+        authMethod: user.authMethod 
+    };
     const token = jwt.sign(token_payload, process.env.JWT_SECRET);
 
     return res.cookie('movie_db_nuxt_token', token, {
