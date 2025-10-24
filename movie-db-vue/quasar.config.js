@@ -8,11 +8,11 @@
 // Configuration for your app
 // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js
 
-const ESLintPlugin = require('eslint-webpack-plugin')
-const dotenv = require('dotenv')
+import ESLintPlugin from 'eslint-webpack-plugin';
+import dotenv from 'dotenv'
 dotenv.config()
 
-const { configure } = require('quasar/wrappers')
+import { configure } from 'quasar/wrappers'
 
 module.exports = configure(function (ctx) {
   return {
