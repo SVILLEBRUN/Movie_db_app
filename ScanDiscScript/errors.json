@@ -1,5 +1,9 @@
 [
   {
+    "title": "20 Ans d'écart (2013)",
+    "error": "Movie not found"
+  },
+  {
     "title": "Becky (2020)",
     "error": "Multiple movies found",
     "results": [
@@ -15,25 +19,25 @@
         "id": 880294,
         "original_language": "en",
         "original_title": "Becky",
-        "overview": "Becky, a bullied teen, wants to be Steph and Ariel’s friend, but when she learns that these popular girls are responsible for a nasty rumor about her father, she seeks revenge. Becky and her dad take matters into their own hands... and relish every part.",
+        "overview": "",
         "release_date": "2020-10-12",
         "title": "Becky"
-      },
-      {
-        "id": 757998,
-        "original_language": "en",
-        "original_title": "On the Lot with Becky Cline - Disney Studio Tour",
-        "overview": "Walt Disney Archives Director Becky Cline leads Disney Files Magazine Editor Ryan March on an insider tour of the Walt Disney Studios lot in Burbank, Calif., exploring hidden tunnels, the Ink & Paint Lab, Walt Disney’s office suite and other historic sites.",
-        "release_date": "2020-10-23",
-        "title": "On the Lot with Becky Cline - Disney Studio Tour"
       },
       {
         "id": 780732,
         "original_language": "en",
         "original_title": "Becky Lucas: Live At Enmore Cafe",
-        "overview": "Becky Lucas is refreshingly real on stage and one of the most exciting new voices in comedy. Her show, Little Bitch, was met with critical acclaim and later filmed live at the Enmore Theatre.",
+        "overview": "",
         "release_date": "2020-10-11",
         "title": "Becky Lucas: Live At Enmore Cafe"
+      },
+      {
+        "id": 757998,
+        "original_language": "en",
+        "original_title": "On the Lot with Becky Cline - Disney Studio Tour",
+        "overview": "",
+        "release_date": "2020-10-23",
+        "title": "On the Lot with Becky Cline - Disney Studio Tour"
       },
       {
         "id": 630054,
@@ -46,6 +50,22 @@
     ]
   },
   {
+    "title": "Bienvenue à Bord (2011)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "Boss Level (2020)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "De l'autre côté du lit (2009)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "En Même Temps (2022)",
+    "error": "Movie not found"
+  },
+  {
     "title": "Forces Spéciales (2011)",
     "error": "Movie not found"
   },
@@ -54,37 +74,19 @@
     "error": "Movie not found"
   },
   {
-    "title": "Incognito (2012)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 738242,
-        "original_language": "pt",
-        "original_title": "Incógnito",
-        "overview": "Lúcia is a lawyer that works to help women whose the father of the relationship deny the paternity. A job she is very keen about since she doesn't know who her father is.",
-        "release_date": "2012-02-26",
-        "title": "Incógnito"
-      },
-      {
-        "id": 1165116,
-        "original_language": "az",
-        "original_title": "İnkoqnito",
-        "overview": "",
-        "release_date": "2012-03-02",
-        "title": "Incognito"
-      },
-      {
-        "id": 153133,
-        "original_language": "en",
-        "original_title": "Undercover Bridesmaid",
-        "overview": "Tanya, agent de sécurité, est engagée par un homme d'affaires pour protéger sa fille lors de son mariage. Tanya déteste les mariages depuis que son fiancé l'a quitté mais pourtant, durant la cérémonie, elle tombe sous le charme de Jake, un ami des mariés. Méfiante, elle refuse de se laisser séduire...",
-        "release_date": "2012-04-15",
-        "title": "Le Bodyguard de l'amour"
-      }
-    ]
+    "title": "Hitmain (2007)",
+    "error": "Movie not found"
   },
   {
     "title": "Inséparables (2019)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "Les Infidèles (2012)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "Les Tuche 2 Le Rêve américain (2016)",
     "error": "Movie not found"
   },
   {
@@ -92,286 +94,32 @@
     "error": "Movie not found"
   },
   {
-    "title": "Rien à déclarer (2010)",
+    "title": "Mc Walter (2025)",
     "error": "Movie not found"
   },
   {
-    "title": "Squadron 303 (2018)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 430727,
-        "original_language": "pl",
-        "original_title": "Dywizjon 303. Historia prawdziwa",
-        "overview": "1940 : un escadron d’élite de l’armée de l’air polonaise est envoyé au Royaume-Uni. Ces quelques pilotes se battront avec bravoure, loin de leur pays, afin de protéger les lignes alliés contre les attaque de l’armée allemande.",
-        "release_date": "2018-08-31",
-        "title": "303 Squadron"
-      },
-      {
-        "id": 506863,
-        "original_language": "en",
-        "original_title": "Hurricane",
-        "overview": "En 1940, le Royaume-Uni est le seul pays en Europe à être en état de lutter contre la souillure grandissante de l'empire nazi. Ses habitants nerveux se demandant ce que l'avenir réserve. Mais une poignée de personnes sur cette île assiégée ne sait que trop bien ce que sera le futur. Ils ont vu Varsovie brûler, la Pologne s'écrouler, la France capituler. Des hommes comme Jan Zumbach, Witold Urbanowicz, Miroslaw Feric et Tolo Lokuciewski, les pilotes de l'Armée de l'Air polonaise, qui savent que si la Luftwaffe n'est pas arrêtée, la Pologne, la Hollande et la France n'auront été que des hors-d'œuvres pour Hitler. Ils sont donc prêts à se battre si on leur confie des avions. Le problème, c'est que les Britanniques ne font pas confiance à ces Polonais…",
-        "release_date": "2018-09-07",
-        "title": "Hurricane - Bataille d'Angleterre"
-      }
-    ]
+    "title": "Mes Cheres Etudes (2009)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "Protéger et Servir (2010)",
+    "error": "Movie not found"
+  },
+  {
+    "title": "Rien à déclarer (2010)",
+    "error": "Movie not found"
   },
   {
     "title": "Star Wars 7 - Star Wars Episode V The Empire Strikes Back (1080)",
     "error": "Movie not found"
   },
   {
-    "title": "Stowaway (2021)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 559581,
-        "original_language": "en",
-        "original_title": "Stowaway",
-        "overview": "Lors d’une mission spatiale à destination de Mars, un passager clandestin, involontaire, prend place à l’intérieur de la navette. Il provoque alors accidentellement de nombreux dommages au sein du vaisseau spatial et remet en question la réussite du voyage. Les ressources vitales se raréfient et deux réactions opposées surgissent. La chercheuse en médecine s’oppose alors à la vision de sa commandante et du biologiste de la mission.",
-        "release_date": "2021-06-24",
-        "title": "Le Passager nº4"
-      },
-      {
-        "id": 943065,
-        "original_language": "en",
-        "original_title": "Stowaway",
-        "overview": "After discovering a baby kraken aboard their ship, two bumbling pirates try to kill it. But as their incompetent attempts escalate, they only throw themselves further into disaster.",
-        "release_date": "2021-10-28",
-        "title": "Stowaway"
-      }
-    ]
-  },
-  {
-    "title": "Tesla (2020)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 517412,
-        "original_language": "en",
-        "original_title": "Tesla",
-        "overview": "La fascinante histoire vraie de Nikola Tesla, le scientifique qui a permis par son génie le transport généralisé de l’électricité. Au cours de ses recherches et expérimentations, il trouve un rival à sa hauteur en la personne d’un autre découvreur, le célèbre Thomas Edison. Au milieu de cette vie tumultueuse, il va faire la rencontre de nombreuses autres personnalités électriques : le banquier super star JP Morgan – et sa fille – ainsi que la célèbre comédienne française Sarah Bernhardt.",
-        "release_date": "2020-08-14",
-        "title": "Tesla"
-      },
-      {
-        "id": 767285,
-        "original_language": "lt",
-        "original_title": "Tesla",
-        "overview": "Young people of our time will experience the biggest technological explosion in human history. Storyline follows friends of this generation who are making hypothetical situations all day long and who later become witnesses of accident and are forced to return from digital world to reality.",
-        "release_date": "2020-11-05",
-        "title": "Tesla"
-      },
-      {
-        "id": 687287,
-        "original_language": "en",
-        "original_title": "Tesla - Five Man London Jam",
-        "overview": "Les rockeurs de Sacramento, en Californie, TESLA ont séjourné dans le studio d'enregistrement emblématique d' Abbey Road  à Londres, en Angleterre, en juin 2019 pour un événement musical d'une soirée durant laquelle le groupe a été filmé interprétant leurs classiques, y compris \"Love Song\" et \"What You Give\", ainsi que leurs reprises de \"Signs\" et \"We Can Work It Out\". Ci-dessous le video clip officiel pour 'We Can Work It Out, reprise des BEATLES",
-        "release_date": "2020-03-27",
-        "title": "TESLA - Five Man London Jam Live"
-      },
-      {
-        "id": 810422,
-        "original_language": "it",
-        "original_title": "Nikola Tesla - the Man from the Future",
-        "overview": "New York, May 16, 1888. Visionary Serbian inventor Nikola Tesla is about to introduce an innovative AC asynchronous motor. Before the demonstration, wealthy businessman George Westinghouse meets Tesla privately to get him to sell him his patent and go into business with him. Tesla declines the offer but during the demonstration something happens that will change the world forever.",
-        "release_date": "2020-10-21",
-        "title": "Nikola Tesla - the Man from the Future"
-      }
-    ]
-  },
-  {
     "title": "The A Team EXTENDED (2010)",
     "error": "Movie not found"
   },
   {
-    "title": "The Space Between Us (2017)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 365942,
-        "original_language": "en",
-        "original_title": "The Space Between Us",
-        "overview": "Gardner a été élevé sur la planète Mars en secret, auprès d'une équipe de scientifiques, après la mort de sa mère astronaute. Devenu adolescent, il voyage avec une jeune femme à travers les États-Unis, en quête d'un père qu'il n'a jamais connu.",
-        "release_date": "2017-01-26",
-        "title": "Un Monde entre Nous"
-      },
-      {
-        "id": 628168,
-        "original_language": "en",
-        "original_title": "The Space Between Us",
-        "overview": "On her first solo voyage into outer space, astronaut Kate and her associates at mission control begin to question her sanity as she hears noises in her head and fears she is being attacked.",
-        "release_date": "2017-09-23",
-        "title": "The Space Between Us"
-      }
-    ]
-  },
-  {
-    "title": "Together (2021)",
-    "error": "Multiple movies found",
-    "results": [
-      {
-        "id": 837548,
-        "original_language": "en",
-        "original_title": "Together",
-        "overview": "Une travailleuse sociale et son mari - qui dirige une société de conseil en informatique - sont contraints de se remettre en question et de réévaluer leur relation à cause du confinement lié à la pandémie de Covid-19.",
-        "release_date": "2021-08-27",
-        "title": "Mariés et confinés"
-      },
-      {
-        "id": 865673,
-        "original_language": "en",
-        "original_title": "Together",
-        "overview": "Together tells the story of the final 46 days of Manchester City’s 2020-21 season, filmed exclusively inside the first-team ‘bubble’, and brings fans closer to players and staff than you’ve ever been before.",
-        "release_date": "2021-08-11",
-        "title": "Together"
-      },
-      {
-        "id": 826391,
-        "original_language": "en",
-        "original_title": "Together",
-        "overview": "Anna and Tom talk to a priest about sex.",
-        "release_date": "2021-04-17",
-        "title": "Together"
-      },
-      {
-        "id": 807381,
-        "original_language": "en",
-        "original_title": "Together",
-        "overview": "Two people have a conversation.",
-        "release_date": "2021-03-18",
-        "title": "Together"
-      },
-      {
-        "id": 946874,
-        "original_language": "ko",
-        "original_title": "Together",
-        "overview": "Albert Shin demonstrates all his directorial prowess and knack for creating stark yet vivid characters with this remarkable drama about two strangers who convene at a seaside motel in South Korea with very particular intentions in mind.",
-        "release_date": "2021-06-09",
-        "title": "Together"
-      },
-      {
-        "id": 888384,
-        "original_language": "en",
-        "original_title": "Together",
-        "overview": "Somewhere in the city, Mason lures his boyfriend Kelly off his seat to dance, leading them to create a happy memory. Jump forward to present day, Kelly is attending a late AA meeting while Mason is drinking at a party, elsewhere in the city. Mason receives a phone call with some distressing news.",
-        "release_date": "2021-08-15",
-        "title": "Together"
-      },
-      {
-        "id": 727002,
-        "original_language": "hu",
-        "original_title": "Felkészülés meghatározatlan ideig tartó együttlétre",
-        "overview": "Márta, une neurochirurgienne de 40 ans, tombe amoureuse. Elle laisse derrière elle sa brillante carrière américaine et retourne à Budapest pour commencer une nouvelle vie avec cet homme. Mais l'amour de sa vie prétend qu'ils ne se sont jamais rencontrés auparavant.",
-        "release_date": "2020-09-24",
-        "title": "Preparations to Be Together for an Unknown Period of Time"
-      },
-      {
-        "id": 776515,
-        "original_language": "en",
-        "original_title": "Together Together",
-        "overview": "Lorsqu'une jeune solitaire devient la mère porteuse d'un homme célibataire dans la quarantaine, les deux inconnus se rendent compte que cette relation inattendue remettra en question leurs perceptions de la connexion, des limites et des particularités de l'amour.",
-        "release_date": "2021-04-23",
-        "title": "Together Together"
-      },
-      {
-        "id": 876103,
-        "original_language": "en",
-        "original_title": "A Christmas Together With You",
-        "overview": "During the Christmas season, Megan and her father-figure Frank head out on a road trip to find his long-lost love. Along the way, Megan finds the love of her own life.",
-        "release_date": "2021-11-20",
-        "title": "A Christmas Together With You"
-      },
-      {
-        "id": 912283,
-        "original_language": "en",
-        "original_title": "We Too Together",
-        "overview": "An autistic boy and his father who returns from war with PTSD help each other find peace with the help of martial arts and music. As a man, Rob also learns to follow his heart when he finds a woman who loves him just as he is.",
-        "release_date": "2021-12-06",
-        "title": "We Too Together"
-      },
-      {
-        "id": 785516,
-        "original_language": "fr",
-        "original_title": "8 Rue de l'Humanité",
-        "overview": "Les rues de Paris sont vides et silencieuses. Alors que certains ont préféré fuir la capitale, sept familles sont restées confinées dans un immeuble du 11ème au 8 rue de l’humanité avec entre autres ; une patronne de bistrot qui cherche le moyen de rester ouvert. Un scientifique ambitieux qui veut trouver le vaccin et ne plus jamais s’occuper d’analyses d’urines. Un hypocondriaque en panique mais heureux d’avoir enfin raison, sa femme avocate qui se bat pour concilier vie professionnelle et vie de famille, un coach sportif en ligne qui grossit au fil des semaines, sa fiancée enceinte qui fait le buzz en devenant chanteuse anti Covid, un riche self-made-man désespéré de ne pas avoir le niveau scolaire de son fils de 8 ans… et deux enfants de 8 et 10 ans qui, grâce au confinement, vont tomber amoureux.",
-        "release_date": "2021-10-20",
-        "title": "8 Rue de l'Humanité"
-      },
-      {
-        "id": 562464,
-        "original_language": "ja",
-        "original_title": "ずっとずっといっしょだよ",
-        "overview": "A tremendous tyrannosaurus—who does not eat meat—and a pterodactyl who cannot fly run into each other and begin their journey to find ‘Paradise’.",
-        "release_date": "2019-08-14",
-        "title": "My Tyrano: Together, Forever"
-      },
-      {
-        "id": 833391,
-        "original_language": "en",
-        "original_title": "Together Forever Tea",
-        "overview": "Experte en marketing, Laura doit vendre la boutique de thé de sa défunte tante. Pour réaliser son dernier souhait et obtenir un prix des sommeliers du thé, Laura souhaite recréer le thé « Rayon de lune » avec l'aide de Matt, un spécialiste des fleurs…",
-        "release_date": "2021-08-06",
-        "title": "Une infusion  d'amour"
-      },
-      {
-        "id": 879288,
-        "original_language": "en",
-        "original_title": "Coming Together",
-        "overview": "A bunch of young adults from different parts of the country despite their shortcomings comes together to talk about movies and have fun together.",
-        "release_date": "2021-09-29",
-        "title": "Coming Together"
-      },
-      {
-        "id": 748898,
-        "original_language": "en",
-        "original_title": "Christmas Together",
-        "overview": "A brokenhearted New York painter, Ava, and a West Coast widower, Mason, have their lives collide when Mason’s young daughter, Mia, rents out his guest house to Ava for Christmas, without her dad's knowledge, in an attempt to convince her dad she is responsible enough to earn a dog for Christmas.",
-        "release_date": "2020-12-02",
-        "title": "Christmas Together"
-      },
-      {
-        "id": 517065,
-        "original_language": "ja",
-        "original_title": "SUNNY 強い気持ち・強い愛",
-        "overview": "Nami est une femme au foyer de 40 ans. Elle rencontre Serika, une copine de lycée, pour la première fois depuis de nombreuses années. Mais Serika est atteinte d'un cancer en phase terminale et dit à Nami qu'elle aimerait beaucoup rencontrer ses anciennes amies du club \"Sunny\" avant de mourir. Nami tente de rassembler les anciennes membres pour une réunion.",
-        "release_date": "2018-08-31",
-        "title": "Sunny : Strong Mind Strong Love"
-      },
-      {
-        "id": 750613,
-        "original_language": "en",
-        "original_title": "The Get Together",
-        "overview": "A recent college post-grad, a soon-to-possibly-be-engaged couple, and a failing musician all deal with the realities of growing up as their three stories intersect over the course of one night at a house party in Austin.",
-        "release_date": "2020-10-22",
-        "title": "The Get Together"
-      },
-      {
-        "id": 63230,
-        "original_language": "fr",
-        "original_title": "Nous ne vieillirons pas ensemble",
-        "overview": "Jean, la quarantaine, est un éternel enfant doublé d'un cinéaste raté. Marié depuis de nombreuses années, il ne peut se résoudre à quitter sa femme pour sa jeune maitresse qu'il côtoie depuis six ans : Catherine. Pourtant amoureux de cette dernière, son comportement et leurs violentes disputes les éloignent un peu plus chaque jour. Jusqu'à ce que Catherine lui annonce son mariage avec un autre homme. Jean impuissant face à cette situation, n'a d'autre choix que de la voir sortir de sa vie…",
-        "release_date": "1972-05-03",
-        "title": "Nous ne vieillirons pas ensemble"
-      },
-      {
-        "id": 1203269,
-        "original_language": "en",
-        "original_title": "Kamikaze Love Volume 4 - Exploring Together",
-        "overview": "Revel in the seductive thrill of part four of SexArt’s erotic classic \"Kamikaze Love,\" directed by Hollywood legend Zalman King. An impressive cast including top stars Elle Alexandra and Malena Morgan makes this dark tale of destructive passion compelling – and highly arousing. It’s the perfect meeting of glamour, intrigue and sex; once seen, never forgotten.",
-        "release_date": "2021-09-13",
-        "title": "Kamikaze Love Volume 4 - Exploring Together"
-      },
-      {
-        "id": 1058893,
-        "original_language": "ko",
-        "original_title": "TOMORROW X TOGETHER THE 3RD PHOTOBOOK H:OUR In Suncheon",
-        "overview": "The 3rd installment of TOMORROW X TOGETHER (TXT) H:OUR photobook series filmed in Suncheon.  Released on September 23, 2021.",
-        "release_date": "2021-09-23",
-        "title": "TOMORROW X TOGETHER THE 3RD PHOTOBOOK H:OUR In Suncheon"
-      }
-    ]
+    "title": "Un Peu Beaucoup Aveuglement (2014)",
+    "error": "Movie not found"
   },
   {
     "title": "Un bonheur n'arrive jamais seul (2011)",
@@ -398,12 +146,12 @@
         "title": "X-Men 2"
       },
       {
-        "id": 1685,
+        "id": 558,
         "original_language": "en",
-        "original_title": "Beneath the Planet of the Apes",
-        "overview": "L'astronaute Brent est envoyé au secours de Taylor, mais s'écrase à son tour sur la \"planète des singes\". Cherchant à retrouver son compagnon avec l'aide de Nova, il suit sa trace jusque dans la \"zone interdite\" où il découvre une société de mutants humains télépathes.",
-        "release_date": "1970-04-23",
-        "title": "Le Secret de la planète des singes"
+        "original_title": "Spider-Man 2",
+        "overview": "2 ans après avoir choisi sa vie de super-héros, Peter Parker ne parvient plus à gérer sa double vie. Il perd son boulot, Mary-Jane sait qu'elle ne peut plus compter sur lui, et ses études prennent le même chemin. Il décide de raccrocher le costume de Spiderman. Son ami Harry lui présente un ami de son professeur de science, le bienveillant docteur Otto Octavius sur lequel il doit rédiger un mémoire. Celui-ci travaille sur la fusion qu'il croit pouvoir contrôler. Mais une démonstration de ses recherches tourne mal, et le docteur se voit doter de 4 membres mécaniques supplémentaires greffés sur sa colonne vertébrale et qui prennent le contrôle de son esprit…",
+        "release_date": "2004-06-25",
+        "title": "Spider-Man 2"
       },
       {
         "id": 7343,
@@ -417,9 +165,17 @@
         "id": 6977,
         "original_language": "en",
         "original_title": "No Country for Old Men",
-        "overview": "À la frontière qui sépare le Texas du Mexique, les trafiquants de drogue ont depuis longtemps remplacé les voleurs de bétail. Lorsque Llewelyn Moss tombe sur une camionnette abandonnée, cernée de cadavres ensanglantés, il ne sait rien de ce qui a conduit à ce drame. Et quand il prend les deux millions de dollars qu’il découvre à l’intérieur du véhicule, il n’a pas la moindre idée de ce que cela va provoquer… Moss a déclenché une réaction en chaîne d’une violence inouïe que le shérif Bell, un homme vieillissant et sans illusions, ne parviendra pas à contenir…",
-        "release_date": "2007-06-13",
+        "overview": "1980, États-Unis, à la frontière qui sépare le Texas du Mexique, les trafiquants mexicains de drogue ont depuis longtemps remplacé les voleurs de bétail. Lorsque Llewelyn Moss découvre dans une plaine des véhicules abandonnés, cernée de cadavres ensanglantés, il ne sait rien de ce qui a conduit à ce drame. Mais il comprend qu'un échange a mal tourné et qu'ils se sont entre-tués. Il recherche un éventuel survivant, le piste et le retrouve mort, au pied d'un arbre avec une valise contenant deux millions de dollars qu'il emporte. Il ne se doute pas de ce que cela va provoquer, mais il se doute que les trafiquants ne vont pas abandonner l'argent. Moss a déclenché une réaction en chaîne que le shérif Ed Tom Bell, un homme proche de la retraite, lucide et clairvoyant, va suivre à la trace…",
+        "release_date": "2007-11-09",
         "title": "No Country for Old Men"
+      },
+      {
+        "id": 1685,
+        "original_language": "en",
+        "original_title": "Beneath the Planet of the Apes",
+        "overview": "L'astronaute Brent est envoyé au secours de Taylor, mais s'écrase à son tour sur la \"planète des singes\". Cherchant à retrouver son compagnon avec l'aide de Nova, il suit sa trace jusque dans la \"zone interdite\" où il découvre une société de mutants humains télépathes.",
+        "release_date": "1970-04-23",
+        "title": "Le Secret de la planète des singes"
       }
     ]
   },
