@@ -38,6 +38,7 @@ def data_request(title, year)
 
 	response = Net::HTTP.get(uri)
 	api_query = JSON.parse(response)
+  return api_query
 end
 
 
