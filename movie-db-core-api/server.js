@@ -10,7 +10,7 @@ app.use(cookieParser())
 
 // Enable CORS
 const corsOptions = {
-	origin: ['http://localhost:3003', process.env.VUE_APP_URL], // Remplacez par l'URL de votre application front-end
+	origin: ['http://localhost:3003', process.env.MDB_FRONTEND_URL], // Remplacez par l'URL de votre application front-end
 	methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 	credentials: true, // Si vous gérez des cookies
 };
