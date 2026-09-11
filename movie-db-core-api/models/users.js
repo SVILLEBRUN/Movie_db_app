@@ -27,7 +27,13 @@ const usersSchema = new mongoose.Schema({
     authMethod: {
         type: String,
         required: true
-    }
-})
+    },
+	lastLogin: {
+		type: Date,
+		default: Date.now
+	}
+}, {
+	timestamps: true
+});
 
 module.exports = mongoose.model('Users', usersSchema)

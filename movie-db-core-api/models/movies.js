@@ -50,6 +50,8 @@ const moviesSchema = new mongoose.Schema({
         type: Array,
         required: false
     }
-})
+}, {
+	timestamps: true
+});
 
 module.exports = mongoose.model('Movies', moviesSchema);

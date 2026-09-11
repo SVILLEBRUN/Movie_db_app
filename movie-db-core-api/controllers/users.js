@@ -82,6 +82,9 @@ exports.login = async (req, res) => {
         const user = await Users.findOne({ email, authMethod: 'local' });
         if(user && await bcrypt.compare(password, user.password)) {
             authUtils.setCookie(res, user)
+
+			user.lastLogin = new Date();
+            await user.save();
             
             return res.status(200).json({ 
                 message: 'User logged in', 
@@ -91,7 +94,9 @@ exports.login = async (req, res) => {
                     first_name: user.first_name,
                     last_name: user.last_name,
                     avatar: user.avatar || null,
-                    authMethod: 'local'
+                    authMethod: 'local',
+					createdAt: user.createdAt,
+					lastLogin: user.lastLogin
                 } 
             });
         } else {
@@ -117,6 +122,10 @@ exports.googleLogin = async (req, res) => {
         const user = await Users.findOne({ email: payload.email, authMethod: 'google' });
         if(user) {
             authUtils.setCookie(res, user)
+
+			user.lastLogin = new Date();
+            await user.save();
+
             return res.status(200).json({ 
                 message: 'User logged in', 
                 user: {
@@ -125,7 +134,9 @@ exports.googleLogin = async (req, res) => {
                     first_name: user.first_name,
                     last_name: user.last_name,
                     avatar: user.avatar || null,
-                    authMethod: 'google'
+                    authMethod: 'google',
+					createdAt: user.createdAt,
+					lastLogin: user.lastLogin
                 } 
             });
         } else {
