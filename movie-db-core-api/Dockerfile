@@ -1,8 +1,7 @@
-FROM node:lts-alpine AS base
+FROM node:26-alpine AS base
 RUN apk update && apk upgrade --no-cache
 
-ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0
-RUN corepack enable
+RUN npm install -g pnpm@12.8.1
 
 WORKDIR /app
 EXPOSE 3000
@@ -23,5 +22,6 @@ ENV NODE_ENV=production
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --prod --frozen-lockfile
 
-COPY --chown=node:group . .
-CMD ["pnpm", "run", "start"]
+COPY --chown=node:node . .
+USER node
+CMD ["node", "server.js"]
