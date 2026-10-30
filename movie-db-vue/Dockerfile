@@ -1,4 +1,4 @@
-FROM node:lts-alpine AS development-stage
+FROM node:26-alpine AS development-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install -g @quasar/cli
